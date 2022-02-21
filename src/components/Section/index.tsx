@@ -10,6 +10,7 @@ export default function IndexPage({
   title1,
   full = false,
   hrefid = '',
+  width='',
   ...rest
 }) {
   const intl = useIntl();
@@ -17,7 +18,7 @@ export default function IndexPage({
     <>
       <a id={hrefid}></a>
       <section className={className} {...rest}>
-        <div className={full ? 'w-full' : 'container mx-auto'}>
+        <div className={full ? 'w-full' : `container mx-auto ${width}`}>
           <SectionTitle title1={title1} align="center" />
           {desc ? <div className="text-center">{desc}</div> : false}
           {children}

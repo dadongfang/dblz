@@ -157,7 +157,7 @@ export default function IndexPage() {
                   <img src={design_after} className="h-full w-auto" />
                   <div
                     className="absolute top-1/2 left-0 w-28 h-28 transform -translate-x-1/2 -translate-y-1/2 cursor-move bg-cover bg-center bg-no-repeat"
-                    // draggable="true"
+                    draggable="true"
                     onDrop={e => handleDrop(e)}
                     onDragOver={e => handleDragOver(e)}
                     onDragEnter={e => handleDragEnter(e)}

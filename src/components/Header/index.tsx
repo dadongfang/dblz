@@ -38,9 +38,9 @@ export default function IndexPage() {
 
   return (
     <header
-      className="w-full top-0 bg-transparent p-3 absolute z-50"
+      className="w-full top-0 bg-transparent px-4 py-6 lg:py-3 absolute z-50 border-0 lg:border-b xl:border-b border-white border-opacity-10"
     >
-      <div className="px-0 border-0 xl:px-20 2xl:px-28 lg:border-b xl:border-b border-white border-opacity-10 mx-auto flex items-center justify-between lg:justify-self-auto text-black lg:text-white">
+      <div className="w-11/12 lg:w-5/6 mx-auto flex items-center justify-between lg:justify-self-auto text-black lg:text-white">
         <div className="logo">
           <img className="w-36 2xl:w-40" src={logo} />
           {/* <div className="text-gray-400 text-xs xl:text-sm 2xl:text-sm mt-1">

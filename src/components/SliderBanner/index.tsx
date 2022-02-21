@@ -1,6 +1,5 @@
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/swiper-bundle.css';
 
 import './index.css';
@@ -12,11 +11,13 @@ export default function IndexPage({ data }) {
     <section id="mainSlider">
       <Swiper
         onSwiper={(swiper) => (window.swiper = swiper)}
-        spaceBetween={50}
+        // spaceBetween={50}
         loop
-        type={'progressbar'}
-        slidesPerView={'auto'}
-        loopedSlides={3}
+        // type={'progressbar'}
+        watchSlidesProgress
+        centeredSlides
+        // slidesPerView={'auto'}
+        // loopedSlides={3}
         autoplay
         watchSlidesProgress
         pagination={{
@@ -31,7 +32,7 @@ export default function IndexPage({ data }) {
         {data.map((v, i) => (
           <SwiperSlide key={i}>
             <img
-              className="transform scale-150 md:scale-100"
+              // className="transform scale-150 md:scale-100"
               referrerPolicy="no-referrer"
               src={v}
             />

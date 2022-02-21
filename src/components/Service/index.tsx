@@ -74,7 +74,7 @@ export default function IndexPage() {
   return (
     <div className="flex flex-col items-center lg:grid lg:grid-cols-3">
       {renderItems(0)}
-      <div className="w-2/3 mb-8 lg:mb-0 lg:w-full flex flex-col justify-center items-center">
+      <div className="w-3/4 sm:w-2/3 sm:px-16 md:px-20 lg:px-0 2xl:px-8 mb-8 lg:mb-0 lg:w-full flex flex-col justify-center items-center">
         <img src={we} className="w-32 lg:w-64" />
         <span className="inline-block w-16 h-px border border-top border-current text-red bg-current my-8"></span>
         <span className="text-white text-center leading-7">

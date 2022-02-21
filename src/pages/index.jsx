@@ -195,17 +195,17 @@ export default function IndexPage() {
       {/* 前世今生 */}
       <a id="id1"></a>
       <div className="w-full relative">
-        <div className="w-full px-3 xl:absolute" style={{background: 'rgb(12,20,65)'}}>
-          <div className="xl:flex flex-row xl:divide-x divide-white divide-opacity-30 border-0 xl:border-b border-white border-opacity-30 px-0 xl:px-20 2xl:px-40">
-            <div className="xl:w-1/3 text-white pt-10 text-center xl:text-left">
-              <span className="text-red">
+        <div className="pastPresent w-full lg:absolute" style={{background: 'rgb(12,20,65)'}}>
+          <div className="lg:flex flex-row lg:divide-x divide-white divide-opacity-30 container w-11/12 lg:4/5 xl:w-3/4 m-auto">
+            <div className="lg:w-1/3 text-white pt-10 text-center lg:text-left text-lg">
+              <span className="text-red text-2xl">
                 Past and Present
               </span>
               <br/>
               前世今生
             </div>
             <div
-              className="text-left md:text-center lg:text-center xl:text-right mt-10 xl:mb-10 text-sm 2xl:text-base leading-6 2xl:leading-8"
+              className="text-center lg:text-right mt-10 lg:mb-10 text-sm leading-6 2xl:leading-8"
               style={{
                 color: '#FFFFFF',
                 flex: 1
@@ -235,11 +235,11 @@ export default function IndexPage() {
       {/* 公司品牌 */}
       <Section
         hrefid="id2"
-        full
+        className="pt-20 bg-center bg-no-repeat bg-cover"
         style={{
           backgroundImage: `url(${require('@/assets/brand/brand_bg.png')})`
         }}
-        className="pt-20 bg-center bg-no-repeat bg-cover px-0 xl:px-20 2xl:px-40"
+        width="md:w-3/4"
         title1={
           <div>
             <span className="text-red">
@@ -262,17 +262,15 @@ export default function IndexPage() {
             <SectionTitle
               title1={
                 <div>
-                  Location
+                  <span>Location</span>
                   <br />
-                  {intl.formatMessage({
-                    id: 'title.区位交通',
-                  })}
+                  区位交通
                 </div>
               }
               align="left"
               color="white"
             />
-            <div className="pt-6 xl:pt-8 text-base lx:text-xl 2xl:text-2xl">
+            <div className="pt-6 xl:pt-8 text-base">
               {intl.formatMessage({
                 id: 'location.desc',
               })}
@@ -373,12 +371,12 @@ export default function IndexPage() {
       </Section>
       {/* 设计理念 */}
       <Section
-        full
         hrefid="id4"
+        className="pt-20 bg-center bg-no-repeat bg-cover"
         style={{
           backgroundImage: `url(${require('@/assets/design/design_bg.png')})`
         }}
-        className="pt-20 bg-center bg-no-repeat bg-cover px-0 xl:px-20 2xl:px-40"
+        width="md:w-3/4"
         title1={
           <div>
             <span className="text-red">
@@ -430,12 +428,12 @@ export default function IndexPage() {
       </Section>
       {/* 共享配套 */}
       <Section
-        full
         hrefid="id5"
-        className="pt-20 bg-center bg-no-repeat bg-cover px-0 xl:px-20 2xl:px-40"
+        className="pt-20 bg-center bg-no-repeat bg-cover"
         style={{
           backgroundImage: `url(${require('@/assets/share/share_bg.png')})`
         }}
+        width="sm:w-10/12"
         title1={
           <div>
             <span className="text-red">
@@ -473,18 +471,18 @@ export default function IndexPage() {
           </div>
         }
       >
-        <div className="mx-auto pt-10 lg:pb-24">
+        <div className="mx-auto pt-10 pb-24">
           <ShareFacility />
         </div>
       </Section>
       {/* 增值服务 */}
       <Section
         hrefid="id6"
-        full
         className="pt-20 pb-10 bg-center bg-no-repeat bg-cover"
         style={{
           backgroundImage: `url(${ossImg('23a879eebfb6b24460101257efe2cf44.png')})`
         }}
+        width="md:w-4/5"
         title1={
           <div>
             <span className="text-red">
@@ -533,15 +531,14 @@ export default function IndexPage() {
           </div>
         }
       >
-        <div className="container mx-auto w-4/5">
-          <Service />
-        </div>
+        <Service />
       </Section>
       {/* 租赁信息 */}
       <Section
         hrefid="id7"
-        className="py-20 px-0 xl:px-20 2xl:px-40"
+        className="py-20"
         style={{background: '#F3F0EF'}}
+        width="sm:w-10/12"
         title1={
           <div>
             <span className="text-red">
