@@ -1,0 +1,48 @@
+#mainSlider {
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    background: #f1f1f1;
+    color: #000;
+    text-align: center;
+    @apply relative;
+  }
+
+  .swiper-pagination {
+    @apply bottom-10 pl-10 sm:bottom-16 sm:pl-20 lg:bottom-28 lg:pl-40 text-left;
+    .swiper-pagination-bullet {
+      color: #C0BBB9;
+      @apply m-0 bg-transparent inline;
+      span {
+        @apply hidden;
+      }
+      .index {
+        width: auto;
+        height: 30px;
+        line-height: 30px;
+        @apply text-center border border-transparent inline-block mx-3;
+        border-radius: 15px;
+        opacity: 1;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      color: white;
+      .index {
+        width: 30px;
+        @apply border-white;
+      }
+      &.index2, &.index3 {
+        .pre {
+          @apply inline-block;
+        }
+      }
+      &.index1, &.index2 {
+        .next {
+          @apply inline-block;
+        }
+      }
+    }
+  }
+}

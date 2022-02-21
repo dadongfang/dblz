@@ -1,0 +1,134 @@
+.posWrap {
+  background: #3db2ad;
+  transition: height 0.15s ease-out;
+  @apply overflow-hidden absolute bottom-0 left-0 right-0 p-3 text-center text-white text-lg;
+  .title {
+    @apply text-lg;
+  }
+  .littleline {
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    margin: 0 auto;
+    @apply hidden;
+  }
+  .desc {
+    height: 0;
+    @apply text-base leading-7 hidden;
+  }
+  &:hover {
+    background: rgba(27, 126, 121, 0.6);
+    @apply h-full;
+    .title {
+      @apply py-5 text-xl;
+    }
+    .littleline {
+      @apply block;
+    }
+    .desc {
+      @apply h-auto p-5 block;
+    }
+  }
+}
+
+.mapBtn {
+  animation-name: upAnimation;
+  transform-origin: center bottom;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+
+  @apply cursor-pointer inline-block text-xs lg:text-sm xl:text-base relative;
+
+  &::before {
+    content: ' ';
+    @apply absolute -inset-1.5 rounded-full border border-white border-opacity-10;
+  }
+  &::after {
+    content: ' ';
+    @apply absolute -inset-1 rounded-full border border-white border-opacity-10;
+  }
+}
+
+@keyframes upAnimation {
+  0% {
+    transform: rotate(0deg);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  10% {
+    transform: rotate(-12deg);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  20% {
+    transform: rotate(12deg);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  28% {
+    transform: rotate(-10deg);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  36% {
+    transform: rotate(10deg);
+    transition-timing-function: cubic-bezier(0.755, 0.5, 0.855, 0.06);
+  }
+
+  42% {
+    transform: rotate(-8deg);
+    transition-timing-function: cubic-bezier(0.755, 0.5, 0.855, 0.06);
+  }
+
+  48% {
+    transform: rotate(8deg);
+    transition-timing-function: cubic-bezier(0.755, 0.5, 0.855, 0.06);
+  }
+
+  52% {
+    transform: rotate(-4deg);
+    transition-timing-function: cubic-bezier(0.755, 0.5, 0.855, 0.06);
+  }
+
+  56% {
+    transform: rotate(4deg);
+    transition-timing-function: cubic-bezier(0.755, 0.5, 0.855, 0.06);
+  }
+
+  60% {
+    transform: rotate(0deg);
+    transition-timing-function: cubic-bezier(0.755, 0.5, 0.855, 0.06);
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+}
+
+.locationLeft {
+  background-color: #FE5E10;
+  &::before {
+    content: ' ';
+    @apply absolute bottom-28 xl:bottom-32 w-full h-2.5 border-t border-white border-opacity-40 -ml-8 xl:-ml-20 2xl:-ml-24;
+  }
+}
+
+.locationDesc {
+  >div {
+    @apply relative;
+    &::after {
+      content: ' ';
+      background: #D8D8D8;
+      border: 1px solid #979797;
+      @apply absolute right-0 top-3 bottom-3 w-px;
+    }
+    &:last-child {
+      &::after {
+        @apply hidden;
+      }
+    }
+  }
+}

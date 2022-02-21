@@ -1,0 +1,16 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+html,
+body {
+  font-size: 16px;
+  color: #222;
+  font-family: MicrosoftYaHei-Bold, MicrosoftYaHei, arial;
+}
+
+.text-red {
+  color: #FE5E10;
+}
