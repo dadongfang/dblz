@@ -21,4 +21,5 @@ https://stackoverflow.com/questions/36782467/set-subdirectory-as-website-root-on
 
 ## 删除subtree
 git rm -r subtree_folder
+
 git commit -m "Remove subtree"
