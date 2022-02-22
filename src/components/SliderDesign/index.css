@@ -8,20 +8,19 @@
   text-align: center;
 } */
 
-#certify2 {
-  position: relative;
+#sliderDesign .slider {
   /* width: 1200px; */
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-#certify2 .swiper-container {
+#sliderDesign .swiper-container {
   overflow: visible;
   @apply pb-8 lg:pb-12;
 }
 
-#certify2 .swiper-slide {
+#sliderDesign .swiper-slide {
   /* width: 1320px; */
   width: 80%;
   /* height: 740px; */
@@ -29,12 +28,12 @@
   /* box-shadow: 0 8px 30px #ddd; */
   /* overflow: hidden; */
 }
-#certify2 .swiper-slide img {
+#sliderDesign .swiper-slide img {
   margin: auto;
   width: 100%;
   display: block;
 }
-#certify2 .swiper-slide p {
+#sliderDesign .swiper-slide p {
   line-height: 98px;
   padding-top: 0;
   text-align: center;
@@ -43,12 +42,12 @@
   margin: 0;
 }
 
-#certify2 .swiper-pagination {
+#sliderDesign .swiper-pagination {
   width: 100%;
   bottom: 0px;
 }
 
-#certify2 .swiper-pagination-bullets .swiper-pagination-bullet {
+#sliderDesign .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 5px;
   border-radius: 0;
   background-color: #cfe4e5;
@@ -57,13 +56,13 @@
   @apply w-3 lg:w-4 xl:w-5 h-1 xl:h-2;
 }
 
-#certify2 .swiper-pagination-bullets .swiper-pagination-bullet-active {
+#sliderDesign .swiper-pagination-bullets .swiper-pagination-bullet-active {
   background-color: #00c9d0;
 
   @apply w-9 lg:w-12 xl:w-16;
 }
 
-#certify2 .swiper-button-prev {
+#sliderDesign .swiper-button-prev {
   left: 0px;
   width: 45px;
   height: 45px;
@@ -74,11 +73,11 @@
   @apply hidden lg:block;
 }
 
-#certify2 .swiper-button-prev:hover {
+#sliderDesign .swiper-button-prev:hover {
   /* background-position: 0 -46px; */
   background-size: 100%;
 }
-#certify2 .swiper-button-next {
+#sliderDesign .swiper-button-next {
   right: 0px;
   width: 45px;
   height: 45px;
@@ -89,17 +88,17 @@
   @apply hidden lg:block text-right;
 }
 
-#certify2 .swiper-button-next:hover {
+#sliderDesign .swiper-button-next:hover {
   /* background-position: 0 -139px; */
   background-size: 100%;
 }
 
-#certify2 .swiper-button-next:after,
+#sliderDesign .swiper-button-next:after,
 .swiper-button-prev:after {
   content: '';
 }
 
-#certify2 .index {
+#sliderDesign .index {
   &::before {
     content: ' ';
     border-color: rgba(185, 154, 138, 0.58);
