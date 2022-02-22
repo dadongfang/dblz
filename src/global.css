@@ -9,6 +9,7 @@ body {
   font-size: 16px;
   color: #222;
   font-family: MicrosoftYaHei-Bold, MicrosoftYaHei, arial;
+  @apply font-thin;
 }
 
 .text-red {

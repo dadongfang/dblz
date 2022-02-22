@@ -1,6 +1,10 @@
 export default {
   WELCOME_TO_UMI_WORLD: '{name}，welcome',
-  'site.title': 'Project Title',
+  'site.title': '德必庐州WE"',
+  'site.logodesc': '长三角（合肥）数字经济科创中心',
+
+  'header.长三角数字科技创新中心':
+    'Digital Technology Innovation Center In The Yangtze River Delta',
 
   'menu.首页': 'Home',
   'menu.项目介绍': 'Project',
@@ -15,6 +19,16 @@ export default {
   'sidemenu.预约参观': 'Visitation appointment',
   'sidemenu.电话咨询': 'Settled hotline',
   'sidemenu.在线咨询': 'Online consultation',
+
+  'banner.科创名城': '科创名城',
+  'banner.数字赋能': '数字赋能',
+  'banner.长三角（合肥）数字经济科创中心': '长三角（合肥）数字经济科创中心',
+  'banner.城在廻归': '城在廻归',
+  'banner.隅见新生': '隅见新生',
+  'banner.老城里的创意新空间': '老城里的创意新空间',
+  'banner.ENJOY': 'ENJOY',
+  'banner.WORKING': 'WORKING',
+  'banner.100-1100㎡精装办公 拎包入驻': '100-1100㎡精装办公 拎包入驻',
 
   'brand.200000+': '200000+',
   'brand.数十个': '50+',
@@ -48,9 +62,6 @@ export default {
   'title.服务': ' service',
   'title.租赁': 'Lease',
   'title.信息': ' information',
-
-  'header.长三角数字科技创新中心':
-    'Digital Technology Innovation Center In The Yangtze River Delta',
 
   'footer.欢迎咨询': 'Service call',
   'footer.项目地址': 'Project address',

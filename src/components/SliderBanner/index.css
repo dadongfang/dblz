@@ -20,17 +20,16 @@
       }
       .index {
         width: auto;
-        height: 30px;
-        line-height: 30px;
-        @apply text-center border border-transparent inline-block mx-3;
-        border-radius: 15px;
+        height: 35px;
+        line-height: 35px;
+        @apply text-center border border-transparent inline-block mx-3 rounded-full;
         opacity: 1;
       }
     }
     .swiper-pagination-bullet-active {
       color: white;
       .index {
-        width: 30px;
+        width: 35px;
         @apply border-white;
       }
       &.index2, &.index3 {

@@ -34,9 +34,6 @@ import car_active from '@/assets/address/car_active.png';
 let popMapIns = null,
   popMobileIns = null;
 
-const s1 = ossImg('c50b5e1dd2ce862f3aebcbd5942e8738.png');
-const s2 = ossImg('be9890ffc541165da07be9949030cc05.png');
-const s3 = ossImg('a91764fe6f3a63a768af7f45098edea4.png');
 const metro_img = ossImg('a8564d082eb392df45e39b28fc6bf5ee.png');
 const bus_img = ossImg('19bd623c80374559d1ac343d16bf7e0a.png');
 const car_img = ossImg('3e78c2c8d47b4a50ba59acf427a09882.png');
@@ -164,7 +161,7 @@ export default function IndexPage() {
       {/* heaser */}
       <Header />
       {/* banner */}
-      <SliderBanner data={[s1, s2, s3]} />
+      <SliderBanner />
       {/* <div
         style={{
           zIndex: 99,

@@ -3,6 +3,8 @@ export default {
   'site.title': '德必庐州WE"',
   'site.logodesc': '长三角（合肥）数字经济科创中心',
 
+  'header.长三角数字科技创新中心': '长三角数字科技创新中心',
+
   'menu.首页': '首页',
   'menu.项目介绍': '项目介绍',
   'menu.公司品牌': '公司品牌',
@@ -16,6 +18,16 @@ export default {
   'sidemenu.预约参观': '预约参观',
   'sidemenu.电话咨询': '电话咨询',
   'sidemenu.在线咨询': '在线咨询',
+
+  'banner.科创名城': '科创名城',
+  'banner.数字赋能': '数字赋能',
+  'banner.长三角（合肥）数字经济科创中心': '长三角（合肥）数字经济科创中心',
+  'banner.城在廻归': '城在廻归',
+  'banner.隅见新生': '隅见新生',
+  'banner.老城里的创意新空间': '老城里的创意新空间',
+  'banner.ENJOY': 'ENJOY',
+  'banner.WORKING': 'WORKING',
+  'banner.100-1100㎡精装办公 拎包入驻': '100-1100㎡精装办公 拎包入驻',
 
   'brand.200000+': '200000+',
   'brand.数十个': '数十个',
@@ -48,8 +60,6 @@ export default {
   'title.服务': '服务',
   'title.租赁': '租赁',
   'title.信息': '信息',
-
-  'header.长三角数字科技创新中心': '长三角数字科技创新中心',
 
   'footer.欢迎咨询': '欢迎咨询',
   'footer.项目地址': '项目地址',
