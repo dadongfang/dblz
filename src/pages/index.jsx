@@ -482,7 +482,7 @@ export default function IndexPage() {
         style={{
           backgroundImage: `url(${ossImg('23a879eebfb6b24460101257efe2cf44.png')})`
         }}
-        width="md:w-4/5"
+        width="md:w-3/5"
         title1={
           <div>
             <span className="text-red">

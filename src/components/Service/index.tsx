@@ -24,16 +24,16 @@ import ico10_active from '@/assets/service/10_active.png';
 import we from '@/assets/service/we.png';
 
 const datas = [
-  { icon: ico1, icon_active: ico1_active, title: '社群活动', desc: 'desc1', translate: 'translate-x-36' },
-  { icon: ico2, icon_active: ico2_active, title: '国际社群节', desc: 'desc2', translate: 'translate-x-2' },
-  { icon: ico3, icon_active: ico3_active, title: '资本对接', desc: 'desc3', translate: '-translate-x-2' },
-  { icon: ico4, icon_active: ico4_active, title: '工商注册服务', desc: 'desc4', translate: '-translate-x-1' },
-  { icon: ico5, icon_active: ico5_active, title: '财务顾问服务', desc: 'desc5', translate: 'translate-x-32' },
-  { icon: ico6, icon_active: ico6_active, title: '人才服务', desc: 'desc6', translate: '-translate-x-36' },
-  { icon: ico7, icon_active: ico7_active, title: '创业服务', desc: 'desc7', translate: '-translate-x-5' },
-  { icon: ico8, icon_active: ico8_active, title: '品牌推广服务', desc: 'desc8', translate: 'translate-x-10' },
-  { icon: ico9, icon_active: ico9_active, title: 'wehome线上服务', desc: 'desc9', translate: 'translate-x-8' },
-  { icon: ico10, icon_active: ico10_active, title: '法律和政策服务', desc: 'desc10', translate: '-translate-x-28' },
+  { icon: ico1, icon_active: ico1_active, title: '社群活动', desc: 'desc1', translate: 'translate-x-36', margin: '-mr-56' },
+  { icon: ico2, icon_active: ico2_active, title: '国际社群节', desc: 'desc2', translate: 'translate-x-2', margin: 'mr-20' },
+  { icon: ico3, icon_active: ico3_active, title: '资本对接', desc: 'desc3', translate: '-translate-x-2', margin: 'mr-28' },
+  { icon: ico4, icon_active: ico4_active, title: '工商注册服务', desc: 'desc4', translate: '-translate-x-1', margin: 'mr-24' },
+  { icon: ico5, icon_active: ico5_active, title: '财务顾问服务', desc: 'desc5', translate: 'translate-x-32', margin: '-mr-52' },
+  { icon: ico6, icon_active: ico6_active, title: '人才服务', desc: 'desc6', translate: '-translate-x-36', margin: '-ml-52' },
+  { icon: ico7, icon_active: ico7_active, title: '创业服务', desc: 'desc7', translate: '-translate-x-5', margin: 'ml-12' },
+  { icon: ico8, icon_active: ico8_active, title: '品牌推广服务', desc: 'desc8', translate: 'translate-x-10', margin: 'ml-44' },
+  { icon: ico9, icon_active: ico9_active, title: 'wehome线上服务', desc: 'desc9', translate: 'translate-x-8', margin: 'ml-36' },
+  { icon: ico10, icon_active: ico10_active, title: '法律和政策服务', desc: 'desc10', translate: '-translate-x-28', margin: '-ml-52' },
 ];
 
 export default function IndexPage() {
@@ -45,12 +45,12 @@ export default function IndexPage() {
     const items = []
 
     for(i; i < start + 5; i++) {
-      const { icon, icon_active, title, translate } = datas[i]
+      const { icon, icon_active, title, translate, margin } = datas[i]
       const isActive = curIndex == i
 
       items.push((index => {
         return (
-          <div key={index} className={`lg:my-10 flex flex-col lg:flex-row items-center cursor-pointer lg:transform lg:${translate} ${start == 5 ? 'flex-col-reverse lg:flex-row-reverse mt-10 lg:mt-10' : 'mb-10 lg:mb-10'}`} onClick={() => {
+          <div key={index} className={`lg:w-full lg:my-10 flex flex-col lg:flex-row items-center cursor-pointer lg:${margin} ${start == 5 ? 'flex-col-reverse lg:flex-row-reverse mt-10' : 'mb-10'}`} onClick={() => {
             setCurIndex(index)
           }}>
             <span className={`text-white h-12 my-2 text-center lg:h-auto lg:my-0 ${isActive ? '' : 'opacity-50'}`}>
@@ -74,8 +74,8 @@ export default function IndexPage() {
   return (
     <div className="flex flex-col items-center lg:grid lg:grid-cols-3">
       {renderItems(0)}
-      <div className="w-3/4 sm:w-2/3 sm:px-16 md:px-20 lg:px-0 2xl:px-8 mb-8 lg:mb-0 lg:w-full flex flex-col justify-center items-center">
-        <img src={we} className="w-32 lg:w-64" />
+      <div className="w-3/4 sm:w-2/3 sm:px-16 md:px-0 mb-8 lg:mb-0 lg:w-full flex flex-col justify-center items-center">
+        <img src={we} className="w-32 lg:w-48" />
         <span className="inline-block w-16 h-px border border-top border-current text-red bg-current my-8"></span>
         <span className="text-white text-center leading-7">
           {intl.formatMessage({
