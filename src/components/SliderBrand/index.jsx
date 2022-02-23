@@ -1,5 +1,6 @@
 import { setLocale, useIntl } from 'umi';
 import SwiperCore, {
+  Autoplay,
   Navigation,
   Pagination,
   Scrollbar,
@@ -12,7 +13,7 @@ import { ossImg } from '@/utils';
 import 'swiper/swiper-bundle.css';
 import './index.css';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
 const imgs = [
   {
@@ -40,7 +41,7 @@ export default function IndexPage() {
         //     return `<div class="${className}"></div>`;
         //   },
         // }}
-        watchSlidesProgress
+        // watchSlidesProgress
         centeredSlides
         onSwiper={(swiper) => (window.swiper = swiper)}
         // spaceBetween={50}
@@ -48,7 +49,11 @@ export default function IndexPage() {
         loop
         // slidesPerView={1}
         // loopedSlides={2}
-        autoplay
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        }}
         onProgress={function (progress, a) {
           // console.log('progress', this);
           // for (let i = 0; i < this.slides.length; i++) {

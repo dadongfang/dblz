@@ -295,7 +295,7 @@ export default function IndexPage() {
             </div>
             <div className="xl:pt-4">
               <ScrollOverPack playScale="0.1" className="h-full">
-                <QueueAnim leaveReverse className="flex flex-row justify-between">
+                <QueueAnim interval={150} leaveReverse className="flex flex-row justify-between">
                   {
                     location.map((type, index) => {
                       const { icon, icon_active, name } = type

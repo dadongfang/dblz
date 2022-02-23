@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import QueueAnim from 'rc-queue-anim';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import SwiperCore, {
+  Autoplay,
   Navigation,
   Pagination,
   Scrollbar,
@@ -19,7 +20,7 @@ import drag from '@/assets/design/drag.png';
 import left from '@/assets/left.png';
 import right from '@/assets/right.png';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
 const imgs = [
   {
@@ -99,7 +100,7 @@ export default function IndexPage() {
           //   },
           // }}
           allowTouchMove={false}
-          watchSlidesProgress
+          // watchSlidesProgress
           centeredSlides
           onSwiper={(swiper) => (window.swiper = swiper)}
           // spaceBetween={50}
@@ -107,7 +108,11 @@ export default function IndexPage() {
           loop
           // slidesPerView={1}
           // loopedSlides={2}
-          autoplay
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          }}
           onProgress={function (progress, a) {
             // console.log('progress', this);
             // for (let i = 0; i < this.slides.length; i++) {

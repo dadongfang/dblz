@@ -24,7 +24,7 @@ export default function IndexPage() {
 
   return (
     <ScrollOverPack playScale="0.1" className="h-full">
-      <QueueAnim type="bottom" leaveReverse className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+      <QueueAnim delay={300} type="bottom" leaveReverse className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
         {
           datas.map((data, index) => {
             const { icon, desc } = data

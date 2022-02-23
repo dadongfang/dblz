@@ -1,4 +1,4 @@
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { setLocale, useIntl } from 'umi';
 import QueueAnim from 'rc-queue-anim';
@@ -10,7 +10,7 @@ import './index.css';
 
 import logo from '@/assets/foot/foot_logo.png';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
 const data = [{
   img: ossImg('c50b5e1dd2ce862f3aebcbd5942e8738.png'),
@@ -44,16 +44,19 @@ export default function IndexPage() {
   return (
     <section id="mainSlider">
       <Swiper
-        onSwiper={(swiper) => (window.swiper = swiper)}
+        onSwiper={swiper => (window.swiper = swiper)}
         // spaceBetween={50}
-        loop
+        loop={true}
         // type={'progressbar'}
-        watchSlidesProgress
-        centeredSlides
+        watchSlidesProgress={true}
+        centeredSlides={true}
         // slidesPerView={'auto'}
         // loopedSlides={3}
-        autoplay
-        watchSlidesProgress
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        }}
         pagination={{
           clickable: true,
           renderBullet: (index, className) => {
