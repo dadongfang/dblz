@@ -202,14 +202,8 @@ export default function IndexPage() {
               <br/>
               前世今生
             </div>
-            <div
-              className="text-center lg:text-right mt-10 lg:mb-10 text-sm leading-6 2xl:leading-8"
-              style={{
-                color: '#FFFFFF',
-                flex: 1
-              }}
-            >
-              <div className="whitespace-pre-line">
+            <div className="flex-1 text-white text-center lg:text-right mt-10 lg:mb-10 text-sm leading-6">
+              <div>
                 {intl.formatMessage({
                   id: 'section1.con1',
                 })}
@@ -268,7 +262,7 @@ export default function IndexPage() {
               align="left"
               color="white"
             />
-            <div className="pt-6 xl:pt-8 text-base">
+            <div className="pt-6 xl:pt-8 text-sm 2xl:text-base">
               {intl.formatMessage({
                 id: 'location.desc',
               })}
@@ -303,9 +297,9 @@ export default function IndexPage() {
 
                       return (
                         <div key={index} className="flex flex-col items-center my-10 w-20 lg:w-24 2xl:w-28 justify-center cursor-pointer" onClick={() => setCurLocation(index)}>
-                          <div className="h-20 lg:h-24 2xl:h-28 flex items-end">
+                          <div className="h-16 lg:h-20 2xl:h-24 flex items-end">
                             <img
-                              className={isActive ? 'w-20 h-20 lg:w-24 lg:h-24 2xl:w-28 2xl:h-28' : 'w-12 h-12 lg:w-16 lg:h-16 2xl:w-20 2xl:h-20'}
+                              className={isActive ? 'w-16 h-16 lg:w-20 lg:h-20 2xl:w-24 2xl:h-24' : 'w-10 h-10 lg:w-14 lg:h-14 2xl:w-16 2xl:h-16'}
                               src={isActive ? icon_active : icon}
                               alt=""
                             />
@@ -317,7 +311,7 @@ export default function IndexPage() {
                             ></span>
                           </div>
                           <div className="h-6 flex flex-col justify-center">
-                            <span className={isActive ? 'font-black text-xl' : ''}>
+                            <span className={isActive ? 'font-black text-lg' : 'text-base'}>
                               {intl.formatMessage({
                                 id: `location.${name}`,
                               })}

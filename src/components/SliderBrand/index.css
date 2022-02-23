@@ -64,34 +64,28 @@
 }
 
 #certify2 .swiper-button-prev {
-  left: 0px;
-  width: 45px;
-  height: 45px;
-  background: url('../../assets/left.png');
+  background-image: url('../../assets/left.png');
   /* background: url(./wm_button_icon.png) no-repeat; */
   /* background-position: 0 0; */
-  background-size: 100%;
-  @apply hidden lg:block;
+  @apply hidden lg:block w-16 h-16 left-0 bg-contain bg-no-repeat;
 }
 
 #certify2 .swiper-button-prev:hover {
   /* background-position: 0 -46px; */
-  background-size: 100%;
+  /* background-size: 100%; */
+  background-image: url('../../assets/left_active.png');
 }
 #certify2 .swiper-button-next {
-  right: 0px;
-  width: 45px;
-  height: 45px;
-  background: url('../../assets/right.png');
+  background-image: url('../../assets/right.png');
   /* background: url(./wm_button_icon.png) no-repeat; */
   /* background-position: 0 -93px; */
-  background-size: 100%;
-  @apply hidden lg:block text-right;
+  @apply hidden lg:block text-right w-16 h-16 right-0 bg-contain bg-no-repeat;
 }
 
 #certify2 .swiper-button-next:hover {
   /* background-position: 0 -139px; */
-  background-size: 100%;
+  /* background-size: 100%; */
+  background-image: url('../../assets/right_active.png');
 }
 
 #certify2 .swiper-button-next:after,

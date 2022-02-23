@@ -105,3 +105,19 @@
     @apply h-px border-t pt-px w-full absolute top-3.5;
   }
 }
+
+#sliderDesign .prev {
+  background-image: url('../../assets/left.png');
+}
+
+#sliderDesign .next {
+  background-image: url('../../assets/right.png');
+}
+
+#sliderDesign .prev:hover {
+  background-image: url('../../assets/left_active.png');
+}
+
+#sliderDesign .next:hover {
+  background-image: url('../../assets/right_active.png');
+}

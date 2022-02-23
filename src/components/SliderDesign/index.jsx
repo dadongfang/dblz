@@ -17,8 +17,8 @@ import './index.css';
 
 import design_after from '@/assets/design/design_after.png';
 import drag from '@/assets/design/drag.png';
-import left from '@/assets/left.png';
-import right from '@/assets/right.png';
+// import left from '@/assets/left.png';
+// import right from '@/assets/right.png';
 
 SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
@@ -205,8 +205,8 @@ export default function IndexPage() {
           </QueueAnim>
         </ScrollOverPack>
       </div>
-      <img src={left} className="hidden lg:block w-16 h-44 pb-28 absolute -left-24 top-1/2 transform -translate-y-1/2 cursor-pointer" onClick={() => window.swiper.slidePrev()} />
-      <img src={right} className="hidden lg:block w-16 h-44 pb-28 absolute -right-24 top-1/2 transform -translate-y-1/2 cursor-pointer" onClick={() => window.swiper.slideNext()} />
+      <div className="prev hidden lg:block w-16 h-44 pb-28 absolute -left-24 top-1/2 transform -translate-y-1/2 cursor-pointer bg-contain bg-no-repeat" onClick={() => window.swiper.slidePrev()}></div>
+      <div className="next hidden lg:block w-16 h-44 pb-28 absolute -right-24 top-1/2 transform -translate-y-1/2 cursor-pointer bg-contain bg-no-repeat" onClick={() => window.swiper.slideNext()}></div>
     </section>
   );
 }
