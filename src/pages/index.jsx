@@ -197,7 +197,7 @@ export default function IndexPage() {
           <div className="lg:flex flex-row lg:divide-x divide-white divide-opacity-30 container w-11/12 lg:4/5 xl:w-3/4 m-auto">
             <div className="lg:w-1/3 text-white pt-10 text-center lg:text-left text-lg">
               <span className="text-red text-2xl">
-                Past and Present
+                PAST AND PRESENT
               </span>
               <br/>
               前世今生
@@ -241,7 +241,7 @@ export default function IndexPage() {
         title1={
           <div>
             <span className="text-red">
-              DoBe Introduction
+              DoBe INTRODUCTION
             </span>
             <br />
             公司品牌
@@ -260,7 +260,7 @@ export default function IndexPage() {
             <SectionTitle
               title1={
                 <div>
-                  <span>Location</span>
+                  <span>LOCATION</span>
                   <br />
                   区位交通
                 </div>

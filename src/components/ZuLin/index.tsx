@@ -46,7 +46,7 @@ export default function IndexPage() {
               const isActive = curIndex == i
 
               return (
-                <div key={v.icon} className={`zulinItem text-center cursor-pointer flex flex-col justify-center relative ${isActive ? 'active' : ''}`} style={{backgroundColor: i%2 == 0 ? '#FCF9F7' : 'white'}} onClick={() => setCurIndex(i)}>
+                <div key={v.icon} className={`zulinItem text-center cursor-pointer flex flex-col justify-center relative ${isActive ? 'active' : ''}`} style={{backgroundColor: i%2 == 0 ? '#FCF9F7' : 'white'}} onMouseOver={() => setCurIndex(i)}>
                   <div className="icon m-5 mt-10">
                     <img
                       className=" w-8 h-8 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12 inline-block"

@@ -8,14 +8,15 @@ import { ossImg } from '@/utils';
 
 import './index.css';
 
-import logo from '@/assets/foot/foot_logo.png';
+import logo from '@/assets/logo.png';
+import banner_logo from '@/assets/slider/banner_logo.png';
 
 SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
 const data = [{
   img: ossImg('c50b5e1dd2ce862f3aebcbd5942e8738.png'),
   desc: [
-    logo,
+    banner_logo,
     '科创名城',
     '数字赋能',
     '长三角（合肥）数字经济科创中心'
@@ -23,7 +24,7 @@ const data = [{
 }, {
   img: ossImg('be9890ffc541165da07be9949030cc05.png'),
   desc: [
-    logo,
+    banner_logo,
     '城在廻归',
     '隅见新生',
     '老城里的创意新空间'
@@ -54,7 +55,7 @@ export default function IndexPage() {
         // loopedSlides={3}
         autoplay={{
           delay: 3000,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
           pauseOnMouseEnter: true
         }}
         pagination={{
