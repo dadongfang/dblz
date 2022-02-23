@@ -1,6 +1,8 @@
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { setLocale, useIntl } from 'umi';
+import QueueAnim from 'rc-queue-anim';
+import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import 'swiper/swiper-bundle.css';
 import { ossImg } from '@/utils';
 
@@ -72,27 +74,29 @@ export default function IndexPage() {
                   referrerPolicy="no-referrer"
                   src={img}
                 />
-                <div className="absolute w-3/4 mx-auto bottom-1/2 text-white flex flex-col items-start  transform translate-y-1/3" style={{left: '13%'}}>
-                  <img
-                    className="w-52"
-                    referrerPolicy="no-referrer"
-                    src={desc[0]}
-                  />
-                  <span className="text-3xl mt-8 mb-4 tracking-widest">
-                    {intl.formatMessage({
-                      id: `banner.${desc[1]}`,
-                    })}
-                    &nbsp;&nbsp;
-                    {intl.formatMessage({
-                      id: `banner.${desc[2]}`,
-                    })}
-                  </span>
-                  <span className="text-red py-0.5 px-2.5 border" style={{borderColor: i == 2 ? '#E2D7D1' : '#FE5E10', color: i == 2 ? '#E2D7D1' : '#FE5E10'}}>
-                    {intl.formatMessage({
-                      id: `banner.${desc[3]}`,
-                    })}
-                  </span>
-                </div>
+                {/* <ScrollOverPack playScale="0.1" className="h-full"> */}
+                  <QueueAnim reversed className="absolute w-3/4 mx-auto bottom-1/2 text-white flex flex-col items-start  transform translate-y-1/3" style={{left: '13%'}}>
+                    <img
+                      className="w-52"
+                      referrerPolicy="no-referrer"
+                      src={desc[0]}
+                    />
+                    <span className="text-3xl mt-8 mb-4 tracking-widest">
+                      {intl.formatMessage({
+                        id: `banner.${desc[1]}`,
+                      })}
+                      &nbsp;&nbsp;
+                      {intl.formatMessage({
+                        id: `banner.${desc[2]}`,
+                      })}
+                    </span>
+                    <span className="text-red py-0.5 px-2.5 border" style={{borderColor: i == 2 ? '#E2D7D1' : '#FE5E10', color: i == 2 ? '#E2D7D1' : '#FE5E10'}}>
+                      {intl.formatMessage({
+                        id: `banner.${desc[3]}`,
+                      })}
+                    </span>
+                  </QueueAnim>
+                {/* </ScrollOverPack> */}
               </div>
             </SwiperSlide>
           )

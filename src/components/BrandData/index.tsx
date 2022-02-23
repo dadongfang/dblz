@@ -1,5 +1,6 @@
 import { setLocale, useIntl } from 'umi';
 import QueueAnim from 'rc-queue-anim';
+import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
 import ico1 from '@/assets/brand/worker.png';
 import ico2 from '@/assets/brand/garden.png';
@@ -21,34 +22,36 @@ export default function IndexPage() {
       className="flex flex-row justify-between px-10 xl:px-24 2xl:px-48"
     >
       <div className="container mx-auto py-5 text-left">
-        <QueueAnim delay={300} className="flex flex-wrap">
-          {datas.map((v, i) => (
-            <div
-              key={i}
-              className="item flex w-1/2 sm:w-1/3 p-3 items-center justify-center"
-            >
-              <div className="icon">
-                <img
-                  className="w-8 h-8  lg:w-12 lg:h-12 xl:w-16 xl:h-16 2xl:w-16 2xl:h-16"
-                  src={v.icon}
-                  alt=""
-                />
-              </div>
-              <div className="pl-3">
-                <div className="text-lg 2xl:text-2xl text-red">
-                  {intl.formatMessage({
-                    id: v.count,
-                  })}
+        <ScrollOverPack playScale="0.1" className="h-full">
+          <QueueAnim leaveReverse className="flex flex-wrap">
+            {datas.map((v, i) => (
+              <div
+                key={i}
+                className="item flex w-1/2 sm:w-1/3 p-3 items-center justify-center"
+              >
+                <div className="icon">
+                  <img
+                    className="w-8 h-8  lg:w-12 lg:h-12 xl:w-16 xl:h-16 2xl:w-16 2xl:h-16"
+                    src={v.icon}
+                    alt=""
+                  />
                 </div>
-                <div className="text-sm 2xl:text-base" style={{color: '#282828'}}>
-                  {intl.formatMessage({
-                    id: v.desc,
-                  })}
+                <div className="pl-3">
+                  <div className="text-lg 2xl:text-2xl text-red">
+                    {intl.formatMessage({
+                      id: v.count,
+                    })}
+                  </div>
+                  <div className="text-sm 2xl:text-base" style={{color: '#282828'}}>
+                    {intl.formatMessage({
+                      id: v.desc,
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </QueueAnim>
+            ))}
+          </QueueAnim>
+        </ScrollOverPack>
       </div>
     </section>
   );

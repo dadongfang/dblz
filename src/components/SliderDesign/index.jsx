@@ -1,5 +1,7 @@
 import { setLocale, useIntl } from 'umi';
 import React, { useState } from 'react';
+import QueueAnim from 'rc-queue-anim';
+import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import SwiperCore, {
   Navigation,
   Pagination,
@@ -175,26 +177,28 @@ export default function IndexPage() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="index flex flex-row justify-around items-start h-16 relative">
-          {
-            imgs.map((img, index) => {
-              return (
-                <div key={index} className="relative mt-px cursor-pointer p-2 pt-0" onClick={() => window.swiper.slideTo(index + 1)}>
-                  <span className={`inline-block text-red w-2 h-2 rounded-full bg-current relative ${curIndex == index ? 'ring-1 ring-current ring-offset-4' : ''}`}></span>
-                  {
-                    curIndex == index && (
-                      <span className="font-black mt-1 absolute -bottom-8 left-1/2 whitespace-nowrap transform -translate-x-1/2">
-                        {intl.formatMessage({
-                          id: `design.${img.title}`,
-                        })}
-                      </span>
-                    )
-                  }
-                </div>
-              )
-            })
-          }
-        </div>
+        <ScrollOverPack playScale="0.1" className="h-full">
+          <QueueAnim leaveReverse className="index flex flex-row justify-around items-start h-16 relative">
+            {
+              imgs.map((img, index) => {
+                return (
+                  <div key={index} className="relative mt-px cursor-pointer p-2 pt-0" onClick={() => window.swiper.slideTo(index + 1)}>
+                    <span className={`inline-block text-red w-2 h-2 rounded-full bg-current relative ${curIndex == index ? 'ring-1 ring-current ring-offset-4' : ''}`}></span>
+                    {
+                      curIndex == index && (
+                        <span className="font-black mt-1 absolute -bottom-8 left-1/2 whitespace-nowrap transform -translate-x-1/2">
+                          {intl.formatMessage({
+                            id: `design.${img.title}`,
+                          })}
+                        </span>
+                      )
+                    }
+                  </div>
+                )
+              })
+            }
+          </QueueAnim>
+        </ScrollOverPack>
       </div>
       <img src={left} className="hidden lg:block w-16 h-44 pb-28 absolute -left-24 top-1/2 transform -translate-y-1/2 cursor-pointer" onClick={() => window.swiper.slidePrev()} />
       <img src={right} className="hidden lg:block w-16 h-44 pb-28 absolute -right-24 top-1/2 transform -translate-y-1/2 cursor-pointer" onClick={() => window.swiper.slideNext()} />

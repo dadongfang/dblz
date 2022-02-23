@@ -1,6 +1,7 @@
 import { setLocale, useIntl, getLocale } from 'umi';
 import React, { useState, useEffect } from 'react';
 import QueueAnim from 'rc-queue-anim';
+import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -293,39 +294,41 @@ export default function IndexPage() {
               </div>
             </div>
             <div className="xl:pt-4">
-              <QueueAnim delay={300} reversed className="flex flex-row justify-between">
-                {
-                  location.map((type, index) => {
-                    const { icon, icon_active, name } = type
-                    const isActive = curLocation == index
+              <ScrollOverPack playScale="0.1" className="h-full">
+                <QueueAnim leaveReverse className="flex flex-row justify-between">
+                  {
+                    location.map((type, index) => {
+                      const { icon, icon_active, name } = type
+                      const isActive = curLocation == index
 
-                    return (
-                      <div key={index} className="flex flex-col items-center my-10 w-20 lg:w-24 2xl:w-28 justify-center cursor-pointer" onClick={() => setCurLocation(index)}>
-                        <div className="h-20 lg:h-24 2xl:h-28 flex items-end">
-                          <img
-                            className={isActive ? 'w-20 h-20 lg:w-24 lg:h-24 2xl:w-28 2xl:h-28' : 'w-12 h-12 lg:w-16 lg:h-16 2xl:w-20 2xl:h-20'}
-                            src={isActive ? icon_active : icon}
-                            alt=""
-                          />
+                      return (
+                        <div key={index} className="flex flex-col items-center my-10 w-20 lg:w-24 2xl:w-28 justify-center cursor-pointer" onClick={() => setCurLocation(index)}>
+                          <div className="h-20 lg:h-24 2xl:h-28 flex items-end">
+                            <img
+                              className={isActive ? 'w-20 h-20 lg:w-24 lg:h-24 2xl:w-28 2xl:h-28' : 'w-12 h-12 lg:w-16 lg:h-16 2xl:w-20 2xl:h-20'}
+                              src={isActive ? icon_active : icon}
+                              alt=""
+                            />
+                          </div>
+                          <div className="h-5 flex flex-col justify-center my-4">
+                            <span
+                              className={isActive ? 'w-4 h-4 inline-block border-4 border-white rounded-full' : 'inline-block border-4 border-white rounded-full'}
+                              style={{backgroundColor: isActive ? '#FE5E10' : 'transparent'}}
+                            ></span>
+                          </div>
+                          <div className="h-6 flex flex-col justify-center">
+                            <span className={isActive ? 'font-black text-xl' : ''}>
+                              {intl.formatMessage({
+                                id: `location.${name}`,
+                              })}
+                            </span>
+                          </div>
                         </div>
-                        <div className="h-5 flex flex-col justify-center my-4">
-                          <span
-                            className={isActive ? 'w-4 h-4 inline-block border-4 border-white rounded-full' : 'inline-block border-4 border-white rounded-full'}
-                            style={{backgroundColor: isActive ? '#FE5E10' : 'transparent'}}
-                          ></span>
-                        </div>
-                        <div className="h-6 flex flex-col justify-center">
-                          <span className={isActive ? 'font-black text-xl' : ''}>
-                            {intl.formatMessage({
-                              id: `location.${name}`,
-                            })}
-                          </span>
-                        </div>
-                      </div>
-                    )
-                  })
-                }
-              </QueueAnim>
+                      )
+                    })
+                  }
+                </QueueAnim>
+              </ScrollOverPack>
             </div>
           </div>
           <div
