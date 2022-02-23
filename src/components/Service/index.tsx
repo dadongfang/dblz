@@ -52,7 +52,7 @@ export default function IndexPage() {
 
       items.push((index => {
         return (
-          <div key={index} className={`lg:w-full lg:my-10 flex flex-col lg:flex-row items-center cursor-pointer ${margin} ${start == 5 ? 'flex-col-reverse lg:flex-row-reverse mt-10' : 'mb-10'}`} onClick={() => {
+          <div key={index} className={`lg:w-full lg:my-10 flex flex-col lg:flex-row items-center cursor-pointer ${margin} ${start == 5 ? 'flex-col-reverse lg:flex-row-reverse mt-10' : 'mb-10'}`} onMouseOver={() => {
             setCurIndex(index)
           }}>
             <span className={`text-white h-12 my-2 text-center lg:h-auto lg:my-0 ${isActive ? '' : 'opacity-50'}`}>
