@@ -13,6 +13,17 @@
   .menu-item.active a,
   .menu-item a:hover {
     color: #FE5E10;
+    @apply relative;
+    &::after {
+      content: ' ';
+      color: #FE5E10;
+      @apply absolute left-0 right-0 -bottom-3 h-0.5 bg-transparent lg:bg-current;
+    }
+  }
+  .menu-item.language a {
+    &::after {
+      @apply bg-transparent;
+    }
   }
 }
 

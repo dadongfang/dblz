@@ -79,9 +79,9 @@ export default function IndexPage() {
                   src={img}
                 />
                 {/* <ScrollOverPack playScale="0.1" className="h-full"> */}
-                  <QueueAnim reversed className="absolute w-3/4 mx-auto bottom-1/2 text-white flex flex-col items-start  transform translate-y-1/3" style={{left: '13%'}}>
+                  <QueueAnim reversed className="absolute w-3/4 mx-auto bottom-1/3 sm:bottom-1/2 text-white flex flex-col items-start  transform translate-y-1/3" style={{left: '13%'}}>
                     <img
-                      className="w-52"
+                      className="w-52 hidden sm:block"
                       referrerPolicy="no-referrer"
                       src={desc[0]}
                     />

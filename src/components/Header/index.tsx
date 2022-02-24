@@ -78,7 +78,7 @@ export default function IndexPage() {
               </li>
             ))}
 
-            <li className="menu-item">
+            <li className="menu-item language">
               <a
                 href=""
                 onClick={(e) => {

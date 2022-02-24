@@ -23,3 +23,6 @@ https://stackoverflow.com/questions/36782467/set-subdirectory-as-website-root-on
 git rm -r subtree_folder
 
 git commit -m "Remove subtree"
+
+## 删除远程分支
+git push origin --delete gh-pages

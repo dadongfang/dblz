@@ -11,7 +11,7 @@
   }
 
   .swiper-pagination {
-    @apply bottom-10 pl-10 sm:bottom-16 sm:pl-20 lg:bottom-28 lg:pl-40 text-left;
+    @apply hidden sm:block bottom-10 pl-10 sm:bottom-20 sm:pl-20 md:bottom-24 md:pl-28 lg:bottom-32 lg:pl-44 text-left;
     .swiper-pagination-bullet {
       color: #C0BBB9;
       @apply m-0 bg-transparent inline opacity-100;
