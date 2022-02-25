@@ -1,5 +1,5 @@
 import { setLocale, useIntl } from 'umi';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import QueueAnim from 'rc-queue-anim';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import SwiperCore, {
@@ -53,32 +53,48 @@ const imgs = [
 export default function IndexPage() {
   const intl = useIntl();
   const [curIndex, setCurIndex] = useState(0);
-  const [curPos, setCurPos] = useState(50);
-  const [startPos, setStartPos] = useState();
+  const [curPos, setCurPos] = useState('50%');
+  // const [startPos, setStartPos] = useState();
+  const [mouseEnter, setMouseEnter] = useState(false);
+  const [leftWidth, setLeftWidth] = useState();
+  const swiperContent = useRef()
 
   const handleDragEnter = e => {
-    e.preventDefault();
+    // e.preventDefault();
     e.stopPropagation();
-    const { clientX } = e
-    setStartPos(clientX)
-    // console.info('handleDragEnter', clientX)
+    const event = e.targetTouches ? e.targetTouches[0] : e
+    const { clientX } = event
+    // setStartPos(clientX)
+    setMouseEnter(true)
+    if (!leftWidth) {
+      const swiperWidth = swiperContent.current.offsetWidth
+      const leftWidth = clientX - swiperWidth / 2
+      setLeftWidth(leftWidth)
+    }
+    // console.info('handleDragEnter', e, clientX)
   };
   const handleDragOver = e => {
-    e.preventDefault();
-    e.stopPropagation();
-    const { clientX } = e
-    const curPos1 = clientX * curPos / startPos
-    setCurPos(curPos1)
-    setStartPos(clientX)
-    // console.info('handleDragOver', clientX, startPos, curPos, curPos1)
+    if (mouseEnter) {
+      // e.preventDefault();
+      e.stopPropagation();
+      const event = e.targetTouches ? e.targetTouches[0] : e
+      const { clientX } = event
+      const curWidth = clientX - leftWidth
+      // const curPos1 = (clientX * curPos / startPos).toFixed(2)
+      setCurPos(`${curWidth}px`)
+      // setStartPos(clientX)
+      // console.info('handleDragOver', clientX, curWidth, curPos)
+    }
   };
   const handleDragLeave = e => {
-    e.preventDefault();
-    e.stopPropagation();
-    const { clientX } = e
-    const curPos1 = clientX * curPos / startPos
-    setCurPos(curPos1)
+    // e.preventDefault();
+    // e.stopPropagation();
+      // const event = e.targetTouches ? e.targetTouches[0] : e
+    // const { clientX } = event
+    // const curPos1 = clientX * curPos / startPos
+    // setCurPos(curPos1)
     // console.info('handleDragLeave', clientX, startPos, curPos, curPos1)
+    setMouseEnter(false)
   };
   const handleDrop = e => {
     e.preventDefault();
@@ -108,11 +124,11 @@ export default function IndexPage() {
           loop
           // slidesPerView={1}
           // loopedSlides={2}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true
-          }}
+          // autoplay={{
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: true
+          // }}
           onProgress={function (progress, a) {
             // console.log('progress', this);
             // for (let i = 0; i < this.slides.length; i++) {
@@ -158,20 +174,29 @@ export default function IndexPage() {
             <SwiperSlide key={i}>
               <div className="relative">
                 <img src={v.after} />
-                <div className="absolute inset-0 flex flex-row">
+                <div className="absolute inset-0 flex flex-row" ref={swiperContent}>
                   <div className="bg-cover bg-left h-full" style={{
                     backgroundImage: `url(${v.before})`,
-                    width: `${curPos}%`
+                    width: curPos
                   }}></div>
-                  <div className="bg-transparent relative" style={{width: `${100 - curPos}%`}}>
+                  <div className="bg-transparent relative flex-1">
                     <img src={design_after} className="h-full w-auto" style={{width: 'auto', marginLeft: 0}} />
                     <div
                       className="absolute top-1/2 left-0 w-28 h-28 transform -translate-x-1/2 -translate-y-1/2 cursor-move bg-cover bg-center bg-no-repeat"
-                      draggable="true"
-                      onDrop={e => handleDrop(e)}
-                      onDragOver={e => handleDragOver(e)}
-                      onDragEnter={e => handleDragEnter(e)}
-                      onDragLeave={e => handleDragLeave(e)}
+                      onMouseDown={e => handleDragEnter(e)}
+                      onMouseMove={e => handleDragOver(e)}
+                      onMouseUp={e => handleDragLeave(e)}
+                      onMouseLeave={e => handleDragLeave(e)}
+                      onMouseOut={e => handleDragLeave(e)}
+                      onTouchStart={e => handleDragEnter(e)}
+                      onTouchMove={e => handleDragOver(e)}
+                      onTouchEnd={e => handleDragLeave(e)}
+                      onTouchCancel={e => handleDragLeave(e)}
+                      // draggable="true"
+                      // onDragEnter={e => handleDragEnter(e)}
+                      // onDragOver={e => handleDragOver(e)}
+                      // onDragLeave={e => handleDragLeave(e)}
+                      // onDrop={e => handleDrop(e)}
                       style={{backgroundImage: `url(${drag})`}}
                     >
                       {/* <img src={drag} /> */}

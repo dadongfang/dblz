@@ -55,7 +55,7 @@ export default function IndexPage() {
         // loopedSlides={3}
         autoplay={{
           delay: 3000,
-          disableOnInteraction: true,
+          disableOnInteraction: false,
           pauseOnMouseEnter: true
         }}
         pagination={{
