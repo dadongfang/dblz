@@ -15,3 +15,22 @@ body {
 .text-red {
   color: #FE5E10;
 }
+
+/* @font-face {
+  font-family: 'Avenir';
+  src: url('//wehome-image-prd.oss-cn-hangzhou.aliyuncs.com/bdf471713ee7dec3e19576abe39ee749.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.thin {
+  font-family: 'Avenir';
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('//wehome-image-prd.oss-cn-hangzhou.aliyuncs.com/87e8f2e7f0ed883aa73d14c0f5d6ddbd.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.medium {
+  font-family: 'Avenir Next';
+} */

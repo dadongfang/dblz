@@ -31,7 +31,7 @@ export default function IndexPage() {
             const isActive = curIndex == index
 
             return (
-              <div key={index} className={`relative cursor-pointer ${isActive ? 'lg:col-span-2' : ''}`} onClick={() => setCurIndex(index)}>
+              <div key={index} className={`relative cursor-pointer ${isActive ? 'lg:col-span-2' : ''}`} onMouseOver={() => setCurIndex(index)}>
                 <img src={icon} className="min-h-full min-w-full object-cover" />
                 <div
                   className="absolute inset-0 text-white flex flex-row justify-between pt-6 px-8 bg-top bg-no-repeat bg-contain tracking-widest font-black"

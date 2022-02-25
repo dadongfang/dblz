@@ -296,7 +296,7 @@ export default function IndexPage() {
                       const isActive = curLocation == index
 
                       return (
-                        <div key={index} className="flex flex-col items-center my-10 w-20 lg:w-24 2xl:w-28 justify-center cursor-pointer" onClick={() => setCurLocation(index)}>
+                        <div key={index} className="flex flex-col items-center my-10 w-20 lg:w-24 2xl:w-28 justify-center cursor-pointer" onMouseOver={() => setCurLocation(index)}>
                           <div className="h-16 lg:h-20 2xl:h-24 flex items-end">
                             <img
                               className={isActive ? 'w-16 h-16 lg:w-20 lg:h-20 2xl:w-24 2xl:h-24' : 'w-10 h-10 lg:w-14 lg:h-14 2xl:w-16 2xl:h-16'}
