@@ -19,7 +19,7 @@ export default function IndexPage() {
       style={{
         background: '#E8E3E2',
       }}
-      className="flex flex-row justify-between px-10 xl:px-24 2xl:px-48"
+      className="flex flex-row justify-between px-10 xl:px-24 2xl:px-48 h-44 sm:h-32"
     >
       <div className="container mx-auto py-5 text-left">
         <ScrollOverPack playScale="0.1" className="h-full">

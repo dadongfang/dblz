@@ -8,8 +8,7 @@
   text-align: center;
 } */
 
-#certify2 {
-  position: relative;
+#certify2 .slider {
   /* width: 1200px; */
   width: 100%;
   margin: 0 auto;
@@ -89,6 +88,23 @@
 }
 
 #certify2 .swiper-button-next:after,
-.swiper-button-prev:after {
+#certify2 .swiper-button-prev:after {
   content: '';
+}
+
+
+#certify2 .prev {
+  background-image: url('../../assets/left.png');
+}
+
+#certify2 .next {
+  background-image: url('../../assets/right.png');
+}
+
+#certify2 .prev:hover {
+  background-image: url('../../assets/left_active.png');
+}
+
+#certify2 .next:hover {
+  background-image: url('../../assets/right_active.png');
 }

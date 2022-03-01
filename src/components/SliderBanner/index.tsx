@@ -14,7 +14,7 @@ import banner_logo from '@/assets/slider/banner_logo.png';
 SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
 const data = [{
-  img: ossImg('c50b5e1dd2ce862f3aebcbd5942e8738.png'),
+  img: ossImg('289d907623e4bcd221f01d130798c22d.jpg'),
   desc: [
     banner_logo,
     '科创名城',
@@ -33,8 +33,8 @@ const data = [{
   img: ossImg('a91764fe6f3a63a768af7f45098edea4.png'),
   desc: [
     logo,
-    'ENJOY',
-    'WORKING',
+    '创意办公',
+    '火热招租',
     '100-1100㎡精装办公 拎包入驻'
   ]
 }]
@@ -45,12 +45,13 @@ export default function IndexPage() {
   return (
     <section id="mainSlider">
       <Swiper
+        navigation
         onSwiper={swiper => (window.swiper = swiper)}
         // spaceBetween={50}
-        loop={true}
+        loop
         // type={'progressbar'}
-        watchSlidesProgress={true}
-        centeredSlides={true}
+        watchSlidesProgress
+        centeredSlides
         // slidesPerView={'auto'}
         // loopedSlides={3}
         autoplay={{

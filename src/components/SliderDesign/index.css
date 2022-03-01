@@ -94,7 +94,7 @@
 }
 
 #sliderDesign .swiper-button-next:after,
-.swiper-button-prev:after {
+#sliderDesign .swiper-button-prev:after {
   content: '';
 }
 

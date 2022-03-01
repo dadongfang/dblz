@@ -4,17 +4,17 @@ import QueueAnim from 'rc-queue-anim';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import { ossImg } from '@/utils';
 
-const ico1 = ossImg('04aa728d6438dc3c175bb71265ee5cf9.png');
-const ico2 = ossImg('5ad817b4cf509732b60af892cebd1b5c.png');
-const ico3 = ossImg('40a28ca68f143fa282254aa70cd25657.png');
+const ico1 = ossImg('c8dd071a0cd768aa1928ea778cd67623.jpg');
+const ico2 = ossImg('af3100ebd7bff19e65f24cd47ba060ce.jpg');
+const ico3 = ossImg('e86a46f2e590d0692877c3bea6791961.jpg');
 const ico4 = ossImg('005fb7326ba6775778517fdc941d39fc.png');
 import active from '@/assets/share/active.png';
 // import { url } from 'inspector';
 
 const datas = [
-  { icon: ico1, desc: '共享空间入口' },
-  { icon: ico2, desc: '精品咖啡' },
-  { icon: ico3, desc: '休闲书屋' },
+  { icon: ico1, desc: '精品咖啡' },
+  { icon: ico2, desc: '共享吧台' },
+  { icon: ico3, desc: '党建书屋' },
   { icon: ico4, desc: '空中花园' }
 ];
 
@@ -23,8 +23,8 @@ export default function IndexPage() {
   const [curIndex, setCurIndex] = useState(0);
 
   return (
-    <ScrollOverPack playScale="0.1" className="h-full">
-      <QueueAnim delay={300} type="bottom" leaveReverse className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+    // <ScrollOverPack playScale="0.1" className="h-full">
+      <QueueAnim className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
         {
           datas.map((data, index) => {
             const { icon, desc } = data
@@ -55,6 +55,6 @@ export default function IndexPage() {
           })
         }
       </QueueAnim>
-    </ScrollOverPack>
+    // </ScrollOverPack>
   );
 }

@@ -10,7 +10,7 @@
   &::after {
     content: '';
     left: 25%;
-    @apply border-b-2 xl:border-t border-solid absolute bottom-0 block w-2/3;
+    @apply border-b-2 xl:border-t border-solid absolute bottom-0 block w-1/2;
   }
 }
 
@@ -43,5 +43,11 @@
   color: #000;
   &::after {
     border-color: #00c9d0;
+  }
+}
+
+.red {
+  &::after {
+    border-color: #FE5E10;
   }
 }

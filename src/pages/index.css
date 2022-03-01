@@ -119,7 +119,7 @@
   background-color: #FE5E10;
   &::before {
     content: ' ';
-    @apply absolute bottom-28 xl:bottom-32 2xl:bottom-36 w-full h-2.5 border-t border-white border-opacity-40 -ml-8 xl:-ml-20 2xl:-ml-24;
+    @apply absolute bottom-28 xl:bottom-32 2xl:bottom-36 w-full h-3.5 border-t border-white border-opacity-40 -ml-8 xl:-ml-20 2xl:-ml-24;
   }
 }
 

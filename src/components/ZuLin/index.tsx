@@ -22,9 +22,9 @@ const datas = [
   { icon: ico1, icon_active: ico1_active, count: '21685.63㎡', desc: '总面积' },
   { icon: ico2, icon_active: ico2_active, count: '24h自主控制', desc: '空调 VRV系统' },
   { icon: ico3, icon_active: ico3_active, count: '电梯4部', desc: 'OTIS/三菱' },
-  { icon: ico4, icon_active: ico4_active, count: '中空Low-e玻璃幕墙', desc: '外立面' },
+  { icon: ico4, icon_active: ico4_active, count: '玻璃幕墙+干挂铝板', desc: '外立面' },
   { icon: ico5, icon_active: ico5_active, count: '100-1100㎡', desc: '单层可租赁面积' },
-  { icon: ico6, icon_active: ico6_active, count: '精装/现状', desc: '交付标准' }
+  { icon: ico6, icon_active: ico6_active, count: '定制精装 拎包入驻', desc: '交付标准' }
 ];
 
 export default function IndexPage() {
@@ -36,7 +36,7 @@ export default function IndexPage() {
   );
 
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div className="flex flex-col lg:flex-row mt-10">
       <img src={ossImg('4bd4df0a96abaff0bad764dfaec38540.png')} className="w-full lg:w-1/2" />
       <section className="w-full lg:w-1/2" style={{ minHeight: 80 }}>
         <ScrollOverPack playScale="0.1" className="h-full">

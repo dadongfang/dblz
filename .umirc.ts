@@ -45,4 +45,9 @@ export default defineConfig({
     require('postcss-nested'),
     require('autoprefixer'),
   ],
+  links: [{
+    rel: 'icon',
+    href: './favicon.ico'
+  }],
+  title: '德必庐州WE”长三角数字经济科创中心'
 });

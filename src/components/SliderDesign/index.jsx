@@ -25,8 +25,8 @@ SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 const imgs = [
   {
     title: '门头-改造前后对比',
-    before: ossImg('003c52f6f1ed31c793d2f28587b46865.jpg'),
-    after: ossImg('d510414c6bb23c183e1c2d6a56615ee9.jpg'),
+    before: ossImg('9c4577931bf05cda377deb2c3cc9e615.jpg'),
+    after: ossImg('d9d961043e0f3e9ddcb2fdff91b16e31.jpg'),
   },
   {
     title: '一楼大堂-改造前后对比',
@@ -118,7 +118,7 @@ export default function IndexPage() {
           allowTouchMove={false}
           // watchSlidesProgress
           centeredSlides
-          onSwiper={(swiper) => (window.swiper = swiper)}
+          onSwiper={(swiper) => (window.designSwiper = swiper)}
           // spaceBetween={50}
           // parallax={true}
           loop
@@ -212,7 +212,7 @@ export default function IndexPage() {
             {
               imgs.map((img, index) => {
                 return (
-                  <div key={index} className="relative mt-px cursor-pointer p-2 pt-0" onClick={() => window.swiper.slideTo(index + 1)}>
+                  <div key={index} className="relative mt-px cursor-pointer p-2 pt-0" onClick={() => window.designSwiper.slideTo(index + 1)}>
                     <span className={`inline-block text-red w-2 h-2 rounded-full bg-current relative ${curIndex == index ? 'ring-1 ring-current ring-offset-4' : ''}`}></span>
                     {
                       curIndex == index && (
@@ -230,8 +230,8 @@ export default function IndexPage() {
           </QueueAnim>
         </ScrollOverPack>
       </div>
-      <div className="prev hidden lg:block w-16 h-44 pb-28 absolute -left-24 top-1/2 transform -translate-y-1/2 cursor-pointer bg-contain bg-no-repeat" onClick={() => window.swiper.slidePrev()}></div>
-      <div className="next hidden lg:block w-16 h-44 pb-28 absolute -right-24 top-1/2 transform -translate-y-1/2 cursor-pointer bg-contain bg-no-repeat" onClick={() => window.swiper.slideNext()}></div>
+      <div className="prev hidden lg:block w-16 h-44 pb-28 absolute -left-24 top-1/2 transform -translate-y-1/2 cursor-pointer bg-contain bg-no-repeat" onClick={() => window.designSwiper.slidePrev()}></div>
+      <div className="next hidden lg:block w-16 h-44 pb-28 absolute -right-24 top-1/2 transform -translate-y-1/2 cursor-pointer bg-contain bg-no-repeat" onClick={() => window.designSwiper.slideNext()}></div>
     </section>
   );
 }

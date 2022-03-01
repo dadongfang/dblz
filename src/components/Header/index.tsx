@@ -5,7 +5,7 @@ import './index.css';
 const menus = [
   { id: 'menu.首页' },
   { id: 'menu.项目介绍' },
-  { id: 'menu.公司品牌' },
+  { id: 'menu.德必品牌' },
   { id: 'menu.区位交通' },
   { id: 'menu.设计理念' },
   { id: 'menu.共享配套' },
@@ -38,7 +38,7 @@ export default function IndexPage() {
 
   return (
     <header
-      className="header w-full top-0 bg-transparent px-4 py-6 lg:py-3 absolute z-50"
+      className="header w-full top-0 bg-black bg-opacity-80 px-4 py-6 lg:py-3 fixed z-50"
     >
       <div className="w-11/12 lg:w-5/6 mx-auto flex items-center justify-between lg:justify-self-auto text-black lg:text-white">
         <div className="logo">

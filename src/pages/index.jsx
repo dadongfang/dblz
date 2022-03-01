@@ -21,9 +21,9 @@ import { getSingle, addEvent, ossImg } from '@/utils';
 
 import './index.css';
 
-// import fixmeet from '@/assets/fix_meet.png';
-// import fixtel from '@/assets/fix_tel.png';
-// import fixmsg from '@/assets/fix_msg.png';
+import fixmeet from '@/assets/fix_meet.png';
+import fixtel from '@/assets/fix_tel.png';
+import fixmsg from '@/assets/fix_msg.png';
 
 import metro from '@/assets/address/metro.png';
 import bus from '@/assets/address/bus.png';
@@ -190,17 +190,17 @@ export default function IndexPage() {
         />
       </div>
 
-      {/* 前世今生 */}
+      {/* 项目介绍 */}
       <a id="id1"></a>
       <div className="w-full relative">
         <div className="pastPresent w-full lg:absolute" style={{background: 'rgb(12,20,65)'}}>
           <div className="lg:flex flex-row lg:divide-x divide-white divide-opacity-30 container w-11/12 lg:4/5 xl:w-3/4 m-auto">
-            <div className="lg:w-1/3 text-white pt-10 text-center lg:text-left text-lg">
+            <div className="lg:w-1/3 text-white pt-20 lg:pt-10 text-center lg:text-left text-lg">
               <span className="text-red text-2xl">
-                PAST AND PRESENT
+                OVERVIEW
               </span>
               <br/>
-              前世今生
+              项目介绍
             </div>
             <div className="flex-1 text-white text-center lg:text-right mt-10 lg:mb-10 text-sm leading-6">
               <div>
@@ -231,14 +231,27 @@ export default function IndexPage() {
         style={{
           backgroundImage: `url(${require('@/assets/brand/brand_bg.png')})`
         }}
-        width="md:w-3/4"
+        // width="md:w-3/4"
+        width="md:w-3/5"
         title1={
           <div>
             <span className="text-red">
               DoBe INTRODUCTION
             </span>
             <br />
-            公司品牌
+            德必品牌
+          </div>
+        }
+        desc={
+          <div
+            className="leading-8 px-5 my-10 text-sm 2xl:text-base"
+            style={{ color: '#666' }}
+          >
+            <div>
+              {intl.formatMessage({
+                id: 'brand.con1',
+              })}
+            </div>
           </div>
         }
       >
@@ -287,7 +300,7 @@ export default function IndexPage() {
                 })}
               </div>
             </div>
-            <div className="xl:pt-4">
+            <div className="xl:pt-4 h-56 xl:h-64">
               <ScrollOverPack playScale="0.1" className="h-full">
                 <QueueAnim interval={150} leaveReverse className="flex flex-row justify-between">
                   {
@@ -394,7 +407,7 @@ export default function IndexPage() {
               {intl.formatMessage({
                 id: 'design.con2',
               })}
-              <span className="font-black">
+              <span>
                 {intl.formatMessage({
                   id: 'design.con3',
                 })}
@@ -402,7 +415,7 @@ export default function IndexPage() {
               {intl.formatMessage({
                 id: 'design.con4',
               })}
-              <span className="font-black">
+              <span>
                 {intl.formatMessage({
                   id: 'design.con5',
                 })}
@@ -443,7 +456,7 @@ export default function IndexPage() {
             style={{ color: '#666' }}
           >
           <div>
-            <span className="font-black">
+            <span>
               {intl.formatMessage({
                 id: 'share.con1',
               })}
@@ -451,7 +464,7 @@ export default function IndexPage() {
             {intl.formatMessage({
               id: 'share.con2',
             })}
-            <span className="font-black">
+            <span>
               {intl.formatMessage({
                 id: 'share.con3',
               })}
@@ -489,7 +502,7 @@ export default function IndexPage() {
           </div>
         }
         desc={
-          <div className="leading-10 my-5 px-5 relative">
+          <div className="leading-10 my-10 px-5 relative">
             <div
               className="text-xs 2xl:text-sm mt-2 leading-6 2xl:leading-7 whitespace-pre-line"
               style={{ color: '#666' }}
@@ -497,7 +510,7 @@ export default function IndexPage() {
               {intl.formatMessage({
                 id: 'service.con1',
               })}
-              <span className="font-black text-white">
+              <span className="text-white">
                 {intl.formatMessage({
                   id: 'service.con2',
                 })}
@@ -505,7 +518,7 @@ export default function IndexPage() {
               {intl.formatMessage({
                 id: 'service.con3',
               })}
-              <span className="font-black text-white">
+              <span className="text-white">
                 {intl.formatMessage({
                   id: 'service.con4',
                 })}
@@ -513,7 +526,7 @@ export default function IndexPage() {
               {intl.formatMessage({
                 id: 'service.con5',
               })}
-              <span className="font-black text-white">
+              <span className="text-white">
                 {intl.formatMessage({
                   id: 'service.con6',
                 })}
@@ -547,7 +560,7 @@ export default function IndexPage() {
       </Section>
       {/* footer */}
       <Footer />
-      {/* <div
+      <div
         className={`${
           sideMenu ? 'right-0 opacity-100' : '-right-full opacity-0'
         } fixed top-1/2 z-10 transition-all duration-500`}
@@ -633,7 +646,7 @@ export default function IndexPage() {
             ></iframe>
           </div>
         </div>
-      </div> */}
+      </div>
     </main>
   );
 }
