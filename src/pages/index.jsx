@@ -507,10 +507,7 @@ export default function IndexPage() {
         }
         desc={
           <div className="leading-10 my-10 px-5 relative">
-            <div
-              className="text-xs 2xl:text-sm mt-2 leading-6 2xl:leading-7 whitespace-pre-line"
-              style={{ color: '#666' }}
-            >
+            <div className="text-xs 2xl:text-sm text-white mt-2 leading-6 2xl:leading-7 whitespace-pre-line">
               {intl.formatMessage({
                 id: 'service.con1',
               })}

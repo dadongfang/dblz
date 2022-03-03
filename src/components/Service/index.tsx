@@ -52,7 +52,7 @@ export default function IndexPage() {
 
       items.push((index => {
         return (
-          <div key={index} style={{cursor: 'url(https://www.baidu.com/favicon.ico), pointer'}} className={`lg:w-full lg:my-10 flex flex-col lg:flex-row items-center ${margin} ${start == 5 ? 'flex-col-reverse lg:flex-row-reverse mt-10' : 'mb-10'}`} onMouseOver={() => {
+          <div key={index} style={{cursor: `url(${require('@/assets/service/cursor.png')}), pointer`}} className={`lg:w-full lg:my-10 flex flex-col lg:flex-row items-center ${margin} ${start == 5 ? 'flex-col-reverse lg:flex-row-reverse mt-10' : 'mb-10'}`} onMouseOver={() => {
             setCurIndex(index)
           }}>
             <span className={`text-white h-12 my-2 text-center lg:h-auto lg:my-0 ${isActive ? '' : 'opacity-50'}`}>

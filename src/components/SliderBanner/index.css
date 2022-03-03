@@ -11,7 +11,28 @@
   }
 
   .swiper-button-prev, .swiper-button-next {
-    @apply hidden sm:block;
+    @apply hidden lg:block bg-cover w-14 h-14;
+  }
+
+  .swiper-button-prev {
+    left: 5%;
+    background-image: url('../../assets/slider/left.png');
+  }
+
+  .swiper-button-prev:hover {
+    background-image: url('../../assets/slider/left_active.png');
+  }
+  .swiper-button-next {
+    right: 5%;
+    background-image: url('../../assets/slider/right.png');
+  }
+
+  .swiper-button-next:hover {
+    background-image: url('../../assets/slider/right_active.png');
+  }
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    content: '';
   }
 
   .swiper-pagination {
