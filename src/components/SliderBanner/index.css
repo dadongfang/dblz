@@ -10,6 +10,10 @@
     @apply relative;
   }
 
+  .swiper-button-prev, .swiper-button-next {
+    @apply hidden sm:block;
+  }
+
   .swiper-pagination {
     @apply hidden sm:block bottom-10 pl-10 sm:bottom-20 sm:pl-20 md:bottom-24 md:pl-28 lg:bottom-32 lg:pl-44 text-left;
     .swiper-pagination-bullet {

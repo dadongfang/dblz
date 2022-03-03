@@ -24,7 +24,8 @@ export default function IndexPage() {
 
   return (
     // <ScrollOverPack playScale="0.1" className="h-full">
-      <QueueAnim className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+      // <QueueAnim className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
         {
           datas.map((data, index) => {
             const { icon, desc } = data
@@ -54,7 +55,8 @@ export default function IndexPage() {
             )
           })
         }
-      </QueueAnim>
+      {/* </QueueAnim> */}
+      </div>
     // </ScrollOverPack>
   );
 }

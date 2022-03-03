@@ -30,7 +30,7 @@ const handleQuickJump = (id, e) => {
   }
 };
 
-export default function IndexPage() {
+export default function IndexPage({ref1, fixed}) {
   const intl = useIntl();
 
   const [visible, setVisible] = useState(false);
@@ -38,7 +38,8 @@ export default function IndexPage() {
 
   return (
     <header
-      className="header w-full top-0 bg-black bg-opacity-80 px-4 py-6 lg:py-3 fixed z-50"
+      className={`header w-full top-0 px-4 py-6 lg:py-3 ${fixed ? 'fixed bg-black bg-opacity-80' : 'absolute bg-transparent'} z-50`}
+      ref={ref1}
     >
       <div className="w-11/12 lg:w-5/6 mx-auto flex items-center justify-between lg:justify-self-auto text-black lg:text-white">
         <div className="logo">
@@ -78,7 +79,7 @@ export default function IndexPage() {
               </li>
             ))}
 
-            <li className="menu-item language">
+            {/* <li className="menu-item language">
               <a
                 href=""
                 onClick={(e) => {
@@ -107,7 +108,7 @@ export default function IndexPage() {
                   EN
                 </span>
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
         {/* <div className="header-phone hidden text-right items-center lg:flex">

@@ -1,5 +1,5 @@
 import { setLocale, useIntl, getLocale } from 'umi';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import QueueAnim from 'rc-queue-anim';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
@@ -45,7 +45,9 @@ export default function IndexPage() {
   const [isFrame, setIsFrame] = useState(false);
   const [showContact, setShowContact] = useState(false);
   const [sideMenu, setSideMenu] = useState(false);
+  const [topMenuFixed, setTopMenuFixed] = useState(false);
   const [curLocation, setCurLocation] = useState(0);
+  const topMenu = useRef()
 
   useEffect(() => {
     // console.log('...');
@@ -56,6 +58,8 @@ export default function IndexPage() {
       } else {
         sideMenu && setSideMenu(false);
       }
+      const menuHeight = topMenu.current.offsetHeight
+      setTopMenuFixed(window.scrollY > menuHeight)
     };
     window.addEventListener('scroll', handleScroll, true);
     return () => {
@@ -160,7 +164,7 @@ export default function IndexPage() {
     <main>
       <a href="" id="id0"></a>
       {/* heaser */}
-      <Header />
+      <Header ref1={topMenu} fixed={topMenuFixed} />
       {/* banner */}
       <SliderBanner />
       {/* <div
@@ -205,17 +209,17 @@ export default function IndexPage() {
             <div className="flex-1 text-white text-center lg:text-right mt-10 lg:mb-10 text-sm leading-6">
               <div>
                 {intl.formatMessage({
-                  id: 'section1.con1',
+                  id: 'overview.con1',
                 })}
               </div>
               <div>
                 {intl.formatMessage({
-                  id: 'section1.con2',
+                  id: 'overview.con2',
                 })}
               </div>
               <div>
                 {intl.formatMessage({
-                  id: 'section1.con3',
+                  id: 'overview.con3',
                 })}
               </div>
             </div>
@@ -611,7 +615,7 @@ export default function IndexPage() {
             </span>
           </a>
         </div>
-        <div
+        {/* <div
           className="text-xs xl:text-sm 2xl:text-sm w-14 xl:w-24 mt-2 text-white text-center p-2 cursor-pointer"
           style={{ backgroundColor: '#00C9D0' }}
           onClick={() => {
@@ -645,7 +649,7 @@ export default function IndexPage() {
               className="iframe w-full h-full"
             ></iframe>
           </div>
-        </div>
+        </div> */}
       </div>
     </main>
   );
