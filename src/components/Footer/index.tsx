@@ -15,7 +15,7 @@ export default function IndexPage() {
     <footer
       className="footer py-12 xl:py-24"
       style={{
-        background: '#34A09B',
+        background: '#FE5E10',
         backgroundImage:
           `url(${ossImg('57a3bda60c10c927ac3d6019a13c6739.png')})`,
         backgroundSize: 'cover',

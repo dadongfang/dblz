@@ -110,7 +110,7 @@ export default function IndexPage() {
     popSpan.innerHTML =
       '<div class="py-4 px-8 bg-white rounded-lg">0551-62628008</div>';
     popSpan.className = 'p-4 rounded-lg';
-    popSpan.style.backgroundColor = 'rgba(0, 201, 208, 0.52)';
+    popSpan.style.backgroundColor = 'rgba(254, 94, 16, 0.52)';
     popDiv.appendChild(popSpan);
     popDiv.style.background = 'rgba(0,0,0,0.3)';
     popDiv.style.zIndex = '999';
@@ -586,7 +586,7 @@ export default function IndexPage() {
       >
         <div
           className="text-xs xl:text-sm 2xl:text-sm w-14 xl:w-24 text-white text-center p-2 cursor-pointer"
-          style={{ backgroundColor: '#00C9D0' }}
+          style={{ backgroundColor: '#FE5E10' }}
           onClick={() => {
             setShowContact(!showContact);
           }}
@@ -599,8 +599,8 @@ export default function IndexPage() {
           </span>
         </div>
         <div
-          className="text-xs xl:text-sm 2xl:text-sm w-14 xl:w-24 mt-2 text-white text-center p-2"
-          style={{ backgroundColor: '#00C9D0' }}
+          className="text-xs xl:text-sm 2xl:text-sm w-14 xl:w-24 mt-2 text-white text-center p-2 cursor-pointer"
+          style={{ backgroundColor: '#FE5E10' }}
         >
           <a
             onClick={(e) => {
@@ -632,7 +632,7 @@ export default function IndexPage() {
         </div>
         {/* <div
           className="text-xs xl:text-sm 2xl:text-sm w-14 xl:w-24 mt-2 text-white text-center p-2 cursor-pointer"
-          style={{ backgroundColor: '#00C9D0' }}
+          style={{ backgroundColor: '#FE5E10' }}
           onClick={() => {
             let iframe = document.querySelector('.iframe');
             if (!isFrame) {

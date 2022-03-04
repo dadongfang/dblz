@@ -19,7 +19,7 @@ export default ({ onSubmit }) => {
     popSpan.innerHTML =
       '<div class="py-4 px-8 bg-white rounded-lg text-center">感谢您的预约，我们招商顾问将在<br />2小时内联系您，请保持手机畅通</div>';
     popSpan.className = 'p-4 rounded-lg';
-    popSpan.style.backgroundColor = 'rgba(0, 201, 208, 0.52)';
+    popSpan.style.backgroundColor = 'rgba(254, 94, 16, 0.52)';
     popDiv.appendChild(popSpan);
     popDiv.style.background = 'rgba(0,0,0,0.3)';
     popDiv.style.zIndex = '999';
@@ -44,7 +44,7 @@ export default ({ onSubmit }) => {
       <div
         className=" z-10 p-3 rounded-lg"
         style={{
-          backgroundColor: 'rgba(0, 201, 208, 0.52)',
+          backgroundColor: 'rgba(254, 94, 16, 0.52)',
         }}
       >
         <div
@@ -120,7 +120,7 @@ export default ({ onSubmit }) => {
                     }
                   });
               }}
-              style={{ backgroundColor: '#00C9D0' }}
+              style={{ backgroundColor: '#FE5E10' }}
               className="text-center text-base 2xl:text-lg p-2 text-white w-full mt-7"
             >
               {intl.formatMessage({
