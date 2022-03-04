@@ -17,7 +17,7 @@ import SliderDesign from '@/components/SliderDesign';
 import ShareFacility from '@/components/ShareFacility'
 import Service from '@/components/Service'
 
-import { getSingle, addEvent, ossImg } from '@/utils';
+import { getSingle, addEvent, ossImg, isInViewPort } from '@/utils';
 
 import './index.css';
 
@@ -47,6 +47,7 @@ export default function IndexPage() {
   const [sideMenu, setSideMenu] = useState(false);
   const [topMenuFixed, setTopMenuFixed] = useState(false);
   const [curLocation, setCurLocation] = useState(0);
+  const [activeMenu, setActiveMenu] = useState(0);
   const topMenu = useRef()
 
   useEffect(() => {
@@ -66,6 +67,23 @@ export default function IndexPage() {
       window.removeEventListener('scroll', handleScroll, true);
     };
   });
+
+  const changeActiveMenu = function (entries, observer) {
+    entries.forEach(entry => {
+      if (isInViewPort(entry.target)) {
+        const { id } = entry.target
+        const index = id.substring(2)
+        // console.info('===', index)
+        setActiveMenu(index)
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(changeActiveMenu, { threshold: 1.0 });
+  document.getElementsByClassName('anchor').forEach(element => {
+    observer.observe(element);
+  });
+
   const popMap = getSingle(function () {
     const popDiv = document.createElement('div');
     const popImg = document.createElement('img');
@@ -162,9 +180,9 @@ export default function IndexPage() {
 
   return (
     <main>
-      <a href="" id="id0"></a>
+      <a id="id0" className="anchor"></a>
       {/* heaser */}
-      <Header ref1={topMenu} fixed={topMenuFixed} />
+      <Header ref1={topMenu} fixed={topMenuFixed} active={activeMenu} />
       {/* banner */}
       <SliderBanner />
       {/* <div
@@ -195,7 +213,7 @@ export default function IndexPage() {
       </div>
 
       {/* 项目介绍 */}
-      <a id="id1"></a>
+      <a id="id1" className="anchor"></a>
       <div className="w-full relative">
         <div className="pastPresent w-full lg:absolute" style={{background: 'rgb(12,20,65)'}}>
           <div className="lg:flex flex-row lg:divide-x divide-white divide-opacity-30 container w-11/12 lg:4/5 xl:w-3/4 m-auto">

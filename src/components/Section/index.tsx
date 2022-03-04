@@ -16,7 +16,7 @@ export default function IndexPage({
   const intl = useIntl();
   return (
     <>
-      <a id={hrefid}></a>
+      <a id={hrefid} className="anchor"></a>
       <section className={className} {...rest}>
         <div className={full ? 'w-full' : `container mx-auto ${width}`}>
           <SectionTitle title1={title1} align="center" />

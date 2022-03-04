@@ -1,5 +1,5 @@
 import { setLocale, useIntl, getLocale } from 'umi';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '@/assets/logo.png';
 import logo_fixed from '@/assets/foot/foot_logo.png';
 import './index.css';
@@ -31,11 +31,16 @@ const handleQuickJump = (id, e) => {
   }
 };
 
-export default function IndexPage({ref1, fixed}) {
+export default function IndexPage({ref1, fixed, active}) {
   const intl = useIntl();
 
   const [visible, setVisible] = useState(false);
   const [nowMenu, setNowMenu] = useState('');
+
+
+  useEffect(() => {
+    setNowMenu(menus[active].id)
+  }, [active]);
 
   return (
     <header
