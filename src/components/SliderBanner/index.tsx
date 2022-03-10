@@ -25,8 +25,8 @@ const data = [{
   img: ossImg('be9890ffc541165da07be9949030cc05.png'),
   desc: [
     banner_logo,
-    '城在廻归',
-    '隅见新生',
+    '城·在廻归',
+    '隅·见新生',
     '老城里的创意新空间'
   ]
 }, {

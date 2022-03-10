@@ -23,8 +23,8 @@ export default {
   'banner.科创名城': '科创名城',
   'banner.数字赋能': '数字赋能',
   'banner.长三角（合肥）数字经济科创中心': '长三角（合肥）数字经济科创中心',
-  'banner.城在廻归': '城在廻归',
-  'banner.隅见新生': '隅见新生',
+  'banner.城·在廻归': '城·在廻归',
+  'banner.隅·见新生': '隅·见新生',
   'banner.老城里的创意新空间': '老城里的创意新空间',
   'banner.创意办公': '创意办公',
   'banner.火热招租': '火热招租',
@@ -77,15 +77,12 @@ export default {
   'footer.电话咨询': 'Settled hotline',
   'footer.在线咨询': 'Online consultation',
 
-  'overview.con1':
-    'With total area of 53,000m² in Hongqiao CBD, Moonstar DoBe WE" is determined to ',
-  'overview.con2':
-    'be the digital technology innovation center in the Yangtze River Delta according to the national strategy of international opening hub, ',
-  'overview.con3':
-    'providing an optimum work environment and resource service platform for Shanghai and digital creative enterprises.',
+  'overview.con1': 'With total area of 53,000m² in Hongqiao CBD, Moonstar DoBe WE" is determined to.',
+  'overview.con2': 'be the digital technology innovation center in the Yangtze River Delta according to the national strategy of international opening hub,',
+  'overview.con3': 'providing an optimum work environment and resource service platform for Shanghai and digital creative enterprises.',
 
   'location.desc': 'Core hub in Hongqiao and three-dimensional traffic system',
-  'location.desc2': 'Core hub in Hongqiao and three-dimensional traffic system',
+  'location.desc2': 'Core hub in Hongqiao and three-dimensional traffic system.',
   'location.查看区位图': 'Click to view location map →',
   'location.地铁': '地铁',
   'location.公交': '公交',
@@ -100,11 +97,11 @@ export default {
   'location.合肥南站': '合肥南站',
   'location.新桥机场': '新桥机场',
 
-  'design.con1': '三孝口、四牌楼、城隍庙、逍遥津……，项目周边承载合肥最多的城市记忆和人文底蕴',
+  'design.con1': '三孝口、四牌楼、城隍庙、逍遥津……，项目周边承载合肥最多的城市记忆和人文底蕴.',
   'design.con2': '德必倡导“',
   'design.con3': 'Enjoy Working',
-  'design.con4': '办公理念，结合庐阳水湖、逍遥阁书屋等地域文化，以智慧美学设计打造精致内部空间，',
-  'design.con5': '营造人文体验，激活创意灵感，打造有温度的办公场景。',
+  'design.con4': '办公理念，结合庐阳水湖、逍遥阁书屋等地域文化，以智慧美学设计打造精致内部空间,',
+  'design.con5': '营造人文体验，激活创意灵感，打造有温度的办公场景.',
   'design.门头-改造前后对比': '门头-改造前后对比',
   'design.一楼大堂-改造前后对比': '一楼大堂-改造前后对比',
   'design.5F共享空间-改造前后对比': '5F共享空间-改造前后对比',
@@ -113,8 +110,8 @@ export default {
 
   'share.con1': '根据现代白领工作习惯',
   'share.con2': '，开放式共享空间——wehome社群中心，引入多种生活办公配套，',
-  'share.con3': '涵盖精品咖啡、休闲书屋、空中花园、健身中心、智慧餐厅、共享吧台、睡眠舱等',
-  'share.con4': '让员工享受类生活式的办公体验， 在工作之余找到更多生活乐趣',
+  'share.con3': '涵盖精品咖啡、休闲书屋、空中花园、健身中心、智慧餐厅、共享吧台、睡眠舱等,',
+  'share.con4': '让员工享受类生活式的办公体验， 在工作之余找到更多生活乐趣.',
   'share.精品咖啡': '精品咖啡',
   'share.共享吧台': '共享吧台',
   'share.党建书屋': '党建书屋',

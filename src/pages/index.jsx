@@ -258,7 +258,7 @@ export default function IndexPage() {
         title1={
           <div>
             <span className="text-red">
-              DoBe INTRODUCTION
+              DoBe GROUP
             </span>
             <br />
             德必品牌
