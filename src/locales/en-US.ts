@@ -78,8 +78,7 @@ export default {
   'footer.在线咨询': 'Online consultation',
 
   'overview.con1': 'With total area of 53,000m² in Hongqiao CBD, Moonstar DoBe WE" is determined to.',
-  'overview.con2': 'be the digital technology innovation center in the Yangtze River Delta according to the national strategy of international opening hub,',
-  'overview.con3': 'providing an optimum work environment and resource service platform for Shanghai and digital creative enterprises.',
+  'overview.con2': 'be the digital technology innovation center in the Yangtze River Delta according to the national strategy of international opening hub,providing an optimum work environment and resource service platform for Shanghai and digital creative enterprises.',
 
   'location.desc': 'Core hub in Hongqiao and three-dimensional traffic system',
   'location.desc2': 'Core hub in Hongqiao and three-dimensional traffic system.',

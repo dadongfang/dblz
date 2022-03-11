@@ -213,7 +213,39 @@ export default function IndexPage() {
       </div>
 
       {/* 项目介绍 */}
-      <a id="id1" className="anchor"></a>
+      <Section
+        hrefid="id1"
+        className="pt-20 bg-center bg-no-repeat bg-cover text-white"
+        style={{
+          backgroundImage: `url(${ossImg('8944eab8e91627ef29c72c69134d7c3f.png')})`
+        }}
+        title1={
+          <div>
+            <span className="text-red">
+              OVERVIEW
+            </span>
+            <br />
+            项目介绍
+          </div>
+        }
+        desc={
+          <div className="leading-8 my-10 text-sm 2xl:text-base">
+            <div>
+              {intl.formatMessage({
+                id: 'overview.con1',
+              })}
+            </div>
+            <div>
+              {intl.formatMessage({
+                id: 'overview.con2',
+              })}
+            </div>
+          </div>
+        }
+      >
+        <div className="h-96 py-96 mt-32"></div>
+      </Section>
+      {/* <a id="id1" className="anchor"></a>
       <div className="w-full relative">
         <div className="pastPresent w-full lg:absolute" style={{background: 'rgb(12,20,65)'}}>
           <div className="lg:flex flex-row lg:divide-x divide-white divide-opacity-30 container w-11/12 lg:4/5 xl:w-3/4 m-auto">
@@ -244,7 +276,7 @@ export default function IndexPage() {
           </div>
         </div>
         <img src={ossImg('1766ce675d3ce5862ea253ca940c2aa3.png')} className="-mt-px" />
-      </div>
+      </div> */}
 
       {/* 公司品牌 */}
       <Section
