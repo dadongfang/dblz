@@ -1,7 +1,7 @@
 import { setLocale, useIntl, getLocale } from 'umi';
 import React, { useState, useEffect } from 'react';
 import logo from '@/assets/logo.png';
-import logo_fixed from '@/assets/foot/foot_logo.png';
+import logo_fixed from '@/assets/logo_dark.png';
 import './index.css';
 const menus = [
   { id: 'menu.首页' },
@@ -44,12 +44,12 @@ export default function IndexPage({ref1, fixed, active}) {
 
   return (
     <header
-      className={`header w-full top-0 px-4 py-6 lg:py-3 ${fixed ? 'fixed bg-white' : 'absolute bg-transparent'} z-50`}
+      className={`header w-full top-0 px-4 py-4 lg:py-3 ${fixed ? 'fixed bg-white' : 'absolute bg-transparent'} z-50`}
       ref={ref1}
     >
       <div className="w-11/12 lg:w-5/6 mx-auto flex items-center justify-between lg:justify-self-auto text-black lg:text-white" style={fixed ? {color: '#222222'} : {}}>
         <div className="logo">
-          <img className="w-36 2xl:w-40" src={fixed ? logo_fixed : logo} />
+          <img className="w-40 2xl:w-44" src={fixed ? logo_fixed : logo} />
           {/* <div className="text-gray-400 text-xs xl:text-sm 2xl:text-sm mt-1">
             {intl.formatMessage({
               id: 'header.长三角数字科技创新中心',

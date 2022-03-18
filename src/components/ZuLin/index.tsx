@@ -2,6 +2,8 @@ import { setLocale, useIntl } from 'umi';
 import QueueAnim from 'rc-queue-anim';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import React, { useState } from 'react';
+import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { ossImg } from '@/utils';
 import './index.css'
 
@@ -17,6 +19,14 @@ import ico3_active from '@/assets/lease/3_active.png';
 import ico4_active from '@/assets/lease/4_active.png';
 import ico5_active from '@/assets/lease/5_active.png';
 import ico6_active from '@/assets/lease/6_active.png';
+
+SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
+
+const data = [{
+  img: ossImg('4bd4df0a96abaff0bad764dfaec38540.png')
+}, {
+  img: ossImg('a2bda7694738f6f1a13307b02ead2aff.jpg')
+}]
 
 const datas = [
   { icon: ico1, icon_active: ico1_active, count: '21685.63㎡', desc: '总面积' },
@@ -37,7 +47,33 @@ export default function IndexPage() {
 
   return (
     <div className="flex flex-col lg:flex-row mt-10">
-      <img src={ossImg('4bd4df0a96abaff0bad764dfaec38540.png')} className="w-full lg:w-1/2" />
+      {/* <img src={ossImg('4bd4df0a96abaff0bad764dfaec38540.png')} className="w-full lg:w-1/2" /> */}
+      <section className="w-full lg:w-1/2">
+        <Swiper
+          onSwiper={swiper => (window.swiper = swiper)}
+          loop
+          centeredSlides
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          }}
+        >
+          {data.map((v, i) => {
+            const {img} = v
+
+            return (
+              <SwiperSlide key={i} className="h-full">
+                <img
+                  // className="transform scale-150 md:scale-100"
+                  referrerPolicy="no-referrer"
+                  src={img}
+                />
+              </SwiperSlide>
+            )
+          })}
+        </Swiper>
+      </section>
       <section className="w-full lg:w-1/2" style={{ minHeight: 80 }}>
         <ScrollOverPack playScale="0.1" className="h-full">
           <QueueAnim key="queue" type="bottom" component={Wrap} leaveReverse>

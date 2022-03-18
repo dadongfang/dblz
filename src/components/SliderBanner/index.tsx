@@ -30,7 +30,7 @@ const data = [{
     '老城里的创意新空间'
   ]
 }, {
-  img: ossImg('a91764fe6f3a63a768af7f45098edea4.png'),
+  img: ossImg('19f1fb2dfed3954e4fb6b20ac7e1214b.png'),
   desc: [
     logo,
     '创意办公',

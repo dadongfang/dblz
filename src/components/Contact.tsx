@@ -139,6 +139,12 @@ export default ({ onSubmit }) => {
           </div>
         </div>
       </div>
+      <span
+        style={{
+          backgroundColor: 'rgba(254, 94, 16, 0.52)',
+        }}
+        className="w-8 h-8 block absolute -right-2.5 -top-2.5 border-2 border-current rounded-full text-white flex items-center justify-center text-3xl cursor-pointer"
+        onClick={onSubmit}>×</span>
     </div>
   );
 };
