@@ -9,7 +9,7 @@ import ico3 from '@/assets/brand/company.png';
 const datas = [
   { icon: ico1, count: 'brand.200000+', desc: 'brand.园区白领' },
   { icon: ico2, count: 'brand.数十个', desc: 'brand.产业园区' },
-  { icon: ico3, count: 'brand.10000+', desc: 'brand.服务企业' },
+  { icon: ico3, count: 'brand.5000+', desc: 'brand.园区企业' },
 ];
 
 export default function IndexPage() {

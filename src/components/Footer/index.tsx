@@ -1,7 +1,7 @@
 import { setLocale, useIntl } from 'umi';
 import React, { useState } from 'react';
 import { ossImg } from '@/utils';
-import logo from '@/assets/foot/foot_logo.png';
+import logo from '@/assets/logo_dark.png';
 
 import './index.css';
 
@@ -27,11 +27,11 @@ export default function IndexPage() {
           <div className="bg-white rounded-md flex flex-wrap p-12">
             <div className="w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 lg:mt-1 flex flex-col justify-center">
               <img src={logo} className="w-2/3 lg:w-1/2 2xl:w-2/5" alt="" />
-              <span className="mt-2">
+              {/* <span className="mt-2">
                 {intl.formatMessage({
                   id: 'site.logodesc',
                 })}
-              </span>
+              </span> */}
             </div>
             <div className="w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 mt-12 lg:mt-1">
               <div className="mt-6 flex flex-row">

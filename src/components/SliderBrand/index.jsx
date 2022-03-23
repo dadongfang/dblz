@@ -17,7 +17,7 @@ SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
 const imgs = [
   {
-    img: ossImg('bbd633b13583aff67e149da24f3110e7.png'),
+    img: ossImg('199d6fb91494d58a3f969e1d8517aaea.jpg'),
   },
   {
     img: ossImg('02aab598a5acc3f51ea1a17fea9ef363.png'),
