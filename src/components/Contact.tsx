@@ -99,7 +99,7 @@ export default ({ onSubmit }) => {
                     body: JSON.stringify({
                       tel,
                       name,
-                      room_id: 7319,
+                      room_id: 5399,
                     }),
                   },
                 )
